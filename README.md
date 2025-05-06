@@ -1,6 +1,6 @@
-# 🩺 PUNCHplan – Fenestrated Stent Graft Planning Software
+# PUNCHplan – Fenestrated Stent Graft Planning Software
 
-**PUNCHplan** is a lightweight, standalone surgical planning tool designed to assist vascular surgeons in planning **physician-modified endografts (PMEG)**.  
+🛠️ **PUNCHplan** is a lightweight, standalone surgical planning software designed to assist vascular surgeons in planning<br> **physician-modified endografts (PMEGs)**.  
 It enables precise design of fenestration locations, visual feedback in 2D/3D, and exports print-ready plans for intraoperative use.
 
 ---
@@ -12,14 +12,14 @@ It enables precise design of fenestration locations, visual feedback in 2D/3D, a
   <img src="./media/2d_view.PNG" width="400"/>
   <img src="./media/punchplan_demo_inf.gif" width="320"/>
 </p>
-*Rotating 3D preview of a fenestrated stent graft generated with PUNCHplan.*
+*Sample 2D and rotating 3D preview of a fenestrated stent graft designed with PUNCHplan.*
 
 ---
 
 ## 🚀 Features
 
-- 🧭 Clock-position-based fenestration design
-- 📏 Baseline distance input and dual referencing
+- 🧭 Computed Tomography (CT) based fenestration design
+- 📏 Baseline distance and clock position input with dual referencing
 - 🎯 Multiple fenestration types and diameters
 - 🖼 2D and 3D visual preview (interactive)
 - 📄 PDF export with surgical planning data
@@ -31,6 +31,19 @@ It enables precise design of fenestration locations, visual feedback in 2D/3D, a
 
 > **➡️ [Download the latest version from the Releases tab](https://github.com/BenBalder/PUNCHplan/releases)**
 
+**⚠️ Windows SmartScreen & Antivirus Notice**<br>
+
+Since the software does not yet have a digital signature, some operating systems (especially Windows) may display a **warning** when launching the .exe file, such as:
+“Windows protected your PC” or “Unknown publisher”.
+
+This is a standard behavior for unsigned applications and does not mean the file is dangerous.<br>
+**PUNCHplan** has been thoroughly tested and is **totally safe to use**, so you can ignore the warning.
+
+**✅ If this happens, to proceed on Windows:**
+
+- Click **“More info”**
+- Then select **“Run anyway”**
+
 No installation required. The program runs as a standalone `.exe`.
 
 ---
@@ -39,7 +52,7 @@ No installation required. The program runs as a standalone `.exe`.
 
 - Windows 10 or newer (64-bit)
 - No installation necessary
-- No internet connection required
+- No internet connection required (only for software updates)
 
 ---
 
