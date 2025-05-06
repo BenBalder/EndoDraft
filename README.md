@@ -56,6 +56,8 @@ or [open an issue](https://github.com/BenBalder/PUNCHplan/issues)
 
 ---
 
-© 2025 Bendegúz Juhos – Semmelweis Aortic Center, Department of Interventional Radiology, Heart and Vascular Centre, Semmelweis University, Budapest, Hungary
+© 2025 Bendegúz Juhos 
+Semmelweis Aortic Center, Department of Interventional Radiology, Heart and Vascular Centre, 
+Semmelweis University, Budapest, Hungary
 
 
