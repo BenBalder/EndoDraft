@@ -51,8 +51,17 @@ or [open an issue](https://github.com/BenBalder/PUNCHplan/issues)
 ---
 
 ## 📜 License
+PUNCHplan - Software License Agreement
 
+Copyright (c) 2025 Bendegúz Juhos
 
+This software (PUNCHplan) is provided free of charge for academic and personal use only.
+
+- Redistribution, modification, or commercial use of the software is strictly prohibited without prior written permission from the author.
+- The software is distributed as a compiled executable (.exe) file only. No source code is provided.
+- The software is provided "as is", without warranty of any kind, express or implied.
+
+By using this software, you agree to the terms above.
 
 ---
 
