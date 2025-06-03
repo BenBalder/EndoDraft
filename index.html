@@ -1,89 +1,156 @@
-# PUNCHplan – Fenestrated Stent Graft Planning Software
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PUNCHplan – Fenestrated Stent Graft Planning Software</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-🛠️ **PUNCHplan** is a lightweight, standalone surgical planning software designed to assist interventional radiologists and vascular surgeons in planning **physician-modified endografts (PMEGs)**.  
-It enables precise design of fenestration locations, visual feedback in 2D/3D, and exports print-ready plans for intraoperative use.
-> **➡️ [Download](#-download)**
----
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
 
-## 🎥 Demo
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
 
-<!-- ![3D Model Preview](./media/punchplan_demo_inf.gif) -->
-<p align="center">
-  <img src="./media/2d_view.PNG" width="400"/>
-  <img src="./media/punchplan_demo_inf.gif" width="320"/>
-</p>
-*Sample 2D and rotating 3D preview of a fenestrated stent graft designed with PUNCHplan.*
-<br><br>
-<p align="center">
-  <img src="./media/punchplan_method.jpg" width="500"/>
-</p>
-*Sample photo about deploying a laser printed punch card made in PUNCHplan.*
+    a:hover {
+      text-decoration: underline;
+    }
 
----
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
 
-## 🚀 Features
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
 
-- 🧭 Computed Tomography (CT) based fenestration design
-- 📏 Baseline distance and clock position input with dual referencing
-- 🎯 Multiple fenestration types and diameters
-- 🖼 2D and 3D visual preview (interactive)
-- 📄 PDF export with surgical planning data
-- 🧠 Ideal for FEVAR / PMEG preoperative workflows
+    .center {
+      text-align: center;
+    }
 
----
+    .note {
+      background: #fff3cd;
+      padding: 10px;
+      border-left: 5px solid #ffecb5;
+      margin: 20px 0;
+    }
 
-## 📦 Download
+    .section {
+      margin-top: 40px;
+    }
 
-> **➡️ [Download the latest version from the Releases tab](https://github.com/BenBalder/PUNCHplan/releases)**
+    hr {
+      margin: 40px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
 
-**⚠️ Windows SmartScreen & Antivirus Notice**<br>
+  <h1>PUNCHplan – Fenestrated Stent Graft Planning Software</h1>
 
-Since the software does not yet have a digital signature, some operating systems (especially Windows) may display a **warning** when launching the .exe file, such as:
-“Windows protected your PC” or “Unknown publisher”.
+  <p>🛠️ <strong>PUNCHplan</strong> is a lightweight, standalone surgical planning software designed to assist interventional radiologists and vascular surgeons in planning <strong>physician-modified endografts (PMEGs)</strong>.<br>
+  It enables precise design of fenestration locations, visual feedback in 2D/3D, and exports print-ready plans for intraoperative use.</p>
 
-This is a standard behavior for unsigned applications and does not mean the file is dangerous.<br>
-**PUNCHplan** has been thoroughly tested and is **totally safe to use**, so you can ignore the warning.
+  <p><strong>➡️ <a href="#download">Download</a></strong></p>
 
-**✅ If this happens, to proceed on Windows:**
+  <hr>
 
-- Click **“More info”**
-- Then select **“Run anyway”**
+  <h2>🎥 Demo</h2>
+  <div class="center">
+    <img src="./media/2d_view.PNG" width="400" alt="2D View"/>
+    <img src="./media/punchplan_demo_inf.gif" width="320" alt="3D Demo"/>
+    <p><em>Sample 2D and rotating 3D preview of a fenestrated stent graft designed with PUNCHplan.</em></p>
+    <br>
+    <img src="./media/punchplan_method.jpg" width="500" alt="Punchcard deployment"/>
+    <p><em>Sample photo about deploying a laser printed punch card made in PUNCHplan.</em></p>
+  </div>
 
-No installation required. The program runs as a standalone `.exe`.
+  <hr>
 
----
+  <h2>🚀 Features</h2>
+  <ul>
+    <li>🧭 Computed Tomography (CT) based fenestration design</li>
+    <li>📏 Baseline distance and clock position input with dual referencing</li>
+    <li>🎯 Multiple fenestration types and diameters</li>
+    <li>🖼 2D and 3D visual preview (interactive)</li>
+    <li>📄 PDF export with surgical planning data</li>
+    <li>🧠 Ideal for FEVAR / PMEG preoperative workflows</li>
+  </ul>
 
-## 🖥 System Requirements
+  <hr id="download">
 
-- Windows 10 or newer (64-bit)
-- No installation necessary
-- No internet connection required (only for software updates)
+  <h2>📦 Download</h2>
+  <p><strong>➡️ <a href="https://github.com/BenBalder/PUNCHplan/releases">Download the latest version from the Releases tab</a></strong></p>
 
----
+  <div class="note">
+    <strong>⚠️ Windows SmartScreen & Antivirus Notice</strong><br>
+    Since the software does not yet have a digital signature, some operating systems (especially Windows) may display a <strong>warning</strong> when launching the .exe file, such as:
+    “Windows protected your PC” or “Unknown publisher”.<br><br>
+    This is standard behavior for unsigned applications and does not mean the file is dangerous.<br>
+    <strong>PUNCHplan</strong> has been thoroughly tested and is <strong>totally safe to use</strong>, so you can ignore the warning.<br><br>
+    ✅ If this happens, to proceed on Windows:
+    <ul>
+      <li>Click <strong>“More info”</strong></li>
+      <li>Then select <strong>“Run anyway”</strong></li>
+    </ul>
+    No installation required. The program runs as a standalone <code>.exe</code>.
+  </div>
 
-## 📧 Feedback or Contact
+  <hr>
 
-If you have questions, feature requests, or feedback, feel free to contact me:
+  <h2>🖥 System Requirements</h2>
+  <ul>
+    <li>Windows 10 or newer (64-bit)</li>
+    <li>No installation necessary</li>
+    <li>No internet connection required (only for software updates)</li>
+  </ul>
 
-📬 **Bendegúz Juhos**  
-`juhos.bendeguz@phd.semmelweis.hu`  
-or [open an issue](https://github.com/BenBalder/PUNCHplan/issues) (GitHub account required)
+  <hr>
 
----
+  <h2>📧 Feedback or Contact</h2>
+  <p>If you have questions, feature requests, or feedback, feel free to contact me:</p>
+  <p>
+    📬 <strong>Bendegúz Juhos</strong><br>
+    <code>juhos.bendeguz@phd.semmelweis.hu</code><br>
+    or <a href="https://github.com/BenBalder/PUNCHplan/issues">open an issue</a> (GitHub account required)
+  </p>
 
-## 📜 License
-PUNCHplan - Software License Agreement
+  <hr>
 
-Copyright (c) 2025 Bendegúz Juhos
+  <h2>📜 License</h2>
+  <p><strong>PUNCHplan - Software License Agreement</strong></p>
+  <p>
+    &copy; 2025 Bendegúz Juhos
+  </p>
+  <ul>
+    <li>This software (PUNCHplan) is provided free of charge for academic and personal use only.</li>
+    <li>Redistribution, modification, or commercial use of the software is strictly prohibited without prior written permission from the author.</li>
+    <li>The software is distributed as a compiled executable (.exe) file only. No source code is provided.</li>
+    <li>The software is provided "as is", without warranty of any kind, express or implied.</li>
+  </ul>
+  <p>By using this software, you agree to the terms above.</p>
 
-This software (PUNCHplan) is provided free of charge for academic and personal use only.
+  <hr>
+  <p>&copy; 2025 Bendegúz Juhos - Semmelweis Aortic Center, Department of Interventional Radiology, Heart and Vascular Centre, Semmelweis University, Budapest, Hungary</p>
 
-- Redistribution, modification, or commercial use of the software is strictly prohibited without prior written permission from the author.
-- The software is distributed as a compiled executable (.exe) file only. No source code is provided.
-- The software is provided "as is", without warranty of any kind, express or implied.
-
-By using this software, you agree to the terms above.
-
----
-
-© 2025 Bendegúz Juhos - Semmelweis Aortic Center, Department of Interventional Radiology, Heart and Vascular Centre, Semmelweis University, Budapest, Hungary
+</body>
+</html>
