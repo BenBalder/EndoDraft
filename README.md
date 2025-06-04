@@ -58,6 +58,7 @@ No installation required. The program runs as a standalone `.exe`.
 - Windows 10 or newer (64-bit)
 - No installation necessary
 - No internet connection required (only for software updates)
+- The software is currently optimized for **Windows**, macOS or Linux users can have issues. **Development is in progress**.
 
 ---
 
