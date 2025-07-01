@@ -39,7 +39,7 @@ It enables precise design of fenestration locations, visual feedback in 2D/3D, a
 
 **⚠️ Windows SmartScreen & Antivirus Notice**<br>
 
-Since the software does not yet have a digital signature, some operating systems (especially Windows) may display a **warning** when launching the .exe file, such as:
+Since the software does not yet have a digital signature (it costs a lot!), some operating systems (especially Windows) may display a **warning** when launching the .exe file, such as:
 “Windows protected your PC” or “Unknown publisher”.
 
 This is a standard behavior for unsigned applications and does not mean the file is dangerous.<br>
