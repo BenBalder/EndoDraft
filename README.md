@@ -10,7 +10,8 @@ It enables precise design of fenestration locations, visual feedback in 2D/3D, a
 <!-- ![3D Model Preview](./media/punchplan_demo_inf.gif) -->
 <p align="center">
   <img src="./media/2d_view.PNG" width="400"/>
-  <img src="./media/punchplan_demo_inf.gif" width="320"/>
+  <img src="./media/punchplan_demo_tube_inf.gif" width="290"/>
+  <img src="./media/punchplan_demo_bif_inf.gif" width="310"/>
 </p>
 *Sample 2D and rotating 3D preview of a fenestrated stent graft designed with PUNCHplan.*
 <br><br>
