@@ -65,11 +65,9 @@ No installation required. The program runs as a standalone `.exe`.
 
 ## 📧 Feedback or Contact
 
-If you have questions, feature requests, or feedback, feel free to contact me:
+If you have questions, feature requests, or feedback, feel free to contact me through the software:
 
-📬 **Bendegúz Juhos**  
-`juhos.bendeguz@phd.semmelweis.hu`  
-or [open an issue](https://github.com/BenBalder/PUNCHplan/issues) (GitHub account required)
+> **➡️ [Download](#-download)**  or [open an issue](https://github.com/BenBalder/PUNCHplan/issues) (GitHub account required)
 
 ---
 
