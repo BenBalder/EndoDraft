@@ -16,7 +16,8 @@ It enables precise design of fenestration locations, visual feedback in 2D/3D, a
 *Sample 2D and rotating 3D preview of a fenestrated stent graft designed with PUNCHplan.*
 <br><br>
 <p align="center">
-  <img src="./media/punchplan_method.jpg" width="500"/>
+  <img src="./media/sample_aaa.png" width="413"/>
+  <img src="./media/punchplan_method.jpg" width="387"/>
 </p>
 *Sample photo about deploying a laser printed punch card made in PUNCHplan.*
 
