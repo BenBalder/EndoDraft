@@ -19,7 +19,7 @@ It enables precise design of fenestration locations, visual feedback in 2D/3D, a
   <img src="./media/sample_aaa.png" width="414"/>
   <img src="./media/punchplan_method.jpg" width="387"/>
 </p>
-*Sample photo about deploying a laser printed punch card made in PUNCHplan.*
+*Sample graphics and photo about deploying a laser printed punch card made in PUNCHplan.*
 
 ---
 
