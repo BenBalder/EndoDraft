@@ -1,6 +1,6 @@
-# PUNCHplan – Surgical Planning Software for Aneurysm Fenestration Templates
+# EndoDraft – Surgical Planning Software for Aneurysm Fenestration Templates
 
-🛠️ **PUNCHplan** is a lightweight, standalone surgical planning software designed to assist interventional radiologists and vascular surgeons in planning **physician-modified endografts (PMEGs)**.  
+🛠️ **EndoDraft** is a lightweight, standalone surgical planning software designed to assist interventional radiologists and vascular surgeons in planning **physician-modified endografts (PMEGs)**.  
 It enables precise design of fenestration locations, visual feedback in 2D/3D, and exports print-ready plans for intraoperative use.
 > **➡️ [Download](#-download)**
 ---
@@ -13,13 +13,13 @@ It enables precise design of fenestration locations, visual feedback in 2D/3D, a
   <img src="./media/punchplan_demo_tube_inf.gif" width="223"/>
   <img src="./media/punchplan_demo_bif_inf.gif" width="237"/>
 </p>
-*Sample 2D and rotating 3D preview of a fenestrated stent graft designed with PUNCHplan.*
+*Sample 2D and rotating 3D preview of a fenestrated stent graft designed with EndoDraft.*
 <br><br>
 <p align="center">
   <img src="./media/sample_aaa.png" width="414"/>
   <img src="./media/punchplan_method.jpg" width="387"/>
 </p>
-*Sample graphics and photo about deploying a laser printed punch card made in PUNCHplan.*
+*Sample graphics and photo about deploying a laser printed punch card made in EndoDraft.*
 
 ---
 
@@ -44,7 +44,7 @@ Since the software does not yet have a digital signature (it costs a lot!), some
 “Windows protected your PC” or “Unknown publisher”.
 
 This is a standard behavior for unsigned applications and does not mean the file is dangerous.<br>
-**PUNCHplan** has been thoroughly tested and is **totally safe to use**, so you can ignore the warning.
+**EndoDraft** has been thoroughly tested and is **totally safe to use**, so you can ignore the warning.
 
 **✅ If this happens, to proceed on Windows:**
 
@@ -73,11 +73,11 @@ If you have questions, feature requests, or feedback, feel free to contact me th
 ---
 
 ## 📜 License
-PUNCHplan - Software License Agreement
+EndoDraft - Software License Agreement
 
 Copyright (c) 2025 Bendegúz Juhos
 
-This software (PUNCHplan) is provided free of charge for academic and personal use only.
+This software (EndoDraft) is provided free of charge for academic and personal use only.
 
 - Redistribution, modification, or commercial use of the software is strictly prohibited without prior written permission from the author.
 - The software is distributed as a compiled executable (.exe) file only. No source code is provided.
