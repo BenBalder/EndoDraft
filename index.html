@@ -2,163 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EndoDraft® – Surgical Planning Software for Aneurysm Fenestration Templates</title>
   <meta name="google-site-verification" content="6zIqFll-PXuVq250mH20EEjCEN8aIeiTz3qWD50C4U8" />
   <link rel="canonical" href="https://www.endodraft.com/" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    h1, h2, h3 {
-      color: #2c3e50;
-    }
-
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    code {
-      background: #eee;
-      padding: 2px 4px;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .note {
-      background: #fff3cd;
-      padding: 10px;
-      border-left: 5px solid #ffecb5;
-      margin: 20px 0;
-    }
-
-    .section {
-      margin-top: 40px;
-    }
-
-    hr {
-      margin: 40px 0;
-      border: none;
-      border-top: 1px solid #ccc;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-700">EndoDraft®</h1>
+      <nav class="space-x-4">
+        <a href="#features" class="text-gray-750 hover:text-indigo-600">Features</a>
+        <a href="#download" class="text-gray-750 hover:text-indigo-600">Download</a>
+        <a href="#contact" class="text-gray-750 hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <h1>EndoDraft ® – Surgical Planning Software for Aneurysm Fenestration Templates</h1>
+  <main class="max-w-[1200px] mx-auto px-6 py-12">
+    <section class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">EndoDraft® – Surgical Planning Software for Aneurysm Fenestration Templates</h2>
+      <p class="text-lg text-gray-750 text-justify">🛠️ <strong>EndoDraft</strong> is a lightweight, standalone surgical planning software designed to assist interventional radiologists and vascular surgeons in planning <strong>physician-modified endografts (PMEGs)</strong>.
+      It enables precise design of fenestration locations, visual feedback in 2D/3D, and exports print-ready plans for intraoperative use.</p>
+      <p class="mt-6">
+        <a href="#download" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">➡️ Download Latest Version</a>
+      </p>
+    </section>
 
-  <p>🛠️ <strong>EndoDraft</strong> is a lightweight, standalone surgical planning software designed to assist interventional radiologists and vascular surgeons in planning <strong>physician-modified endografts (PMEGs)</strong>.<br>
-  It enables precise design of fenestration locations, visual feedback in 2D/3D, and exports print-ready plans for intraoperative use.</p>
+    <hr class="my-10">
 
-  <p><strong>➡️ <a href="#download">Download</a></strong></p>
+    <section class="text-center mb-16">
+      <h3 class="text-2xl font-semibold mb-6">🎥 Demo</h3>
+      <div class="grid gap-6">
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="flex flex-row flex-wrap justify-center gap-4">
+            <img src="./media/2d_view.PNG" width="400" alt="2D View" class="rounded shadow">
+            <img src="./media/punchplan_demo_tube_inf.gif" width="290" alt="3D Demo" class="rounded shadow">
+            <img src="./media/punchplan_demo_bif_inf.gif" width="310" alt="3D Demo" class="rounded shadow">
+          </div>
+          <p class="text-sm text-gray-550 italic">Sample 2D and rotating 3D preview of a fenestrated stent graft designed with EndoDraft.</p>
+          <div class="flex flex-row flex-wrap justify-center gap-4">
+            <img src="./media/sample_aaa.png" width="535" alt="Sample Aneurysm" class="rounded shadow">
+            <img src="./media/punchplan_method.jpg" width="500" alt="Punchcard deployment" class="rounded shadow">
+          </div>
+          <p class="text-sm text-gray-550 italic">Sample graphics and photo about deploying a laser printed punch card made in EndoDraft.</p>
+          <div class="flex justify-center">
+            <img src="./media/sw_picture.PNG" width="1050" alt="Screenshot" class="rounded shadow">
+          </div>
+          <p class="text-sm text-gray-550 italic">Screenshot while using the software.</p>
+        </div>
+      </div>
+    </section>
 
-  <hr>
+    <hr class="my-10">
 
-  <h2>🎥 Demo</h2>
-  <div class="center">
-    <img src="./media/2d_view.PNG" width="400" alt="2D View"/>
-    <img src="./media/punchplan_demo_tube_inf.gif" width="290" alt="3D Demo"/>
-    <img src="./media/punchplan_demo_bif_inf.gif" width="310" alt="3D Demo"/>
-    <p><em>Sample 2D and rotating 3D preview of a fenestrated stent graft designed with EndoDraft.</em></p>
-    <br>
-    <img src="./media/sample_aaa.png" width="535" alt="Sample Aneurysm"/>
-    <img src="./media/punchplan_method.jpg" width="500" alt="Punchcard deployment"/>
-    <p><em>Sample graphics and photo about deploying a laser printed punch card made in EndoDraft.</em></p>
-    <br>
-    <img src="./media/sw_picture.PNG" width="1050" alt="Screenshot"/>
-    <p><em>Screenshot while using the software.</em></p>
-    <br>
-  </div>
+	<section id="features" class="mb-16 text-center scroll-mt-24">
+	  <h3 class="text-2xl font-semibold text-gray-800 mb-6">🚀 Features</h3>
+	  
+	  <div class="flex justify-center">
+		<ul class="grid sm:grid-cols-2 gap-4 text-gray-750 text-left">
+		  <li>🧭 Computed Tomography (CT) based fenestration design</li>
+		  <li>📏 Baseline distance and clock position input with dual referencing</li>
+		  <li>🎯 Multiple fenestration types and diameters</li>
+		  <li>🖼 2D and 3D visual preview (interactive)</li>
+		  <li>📄 PDF export with surgical planning data</li>
+		  <li>🧠 Ideal for FEVAR / PMEG preoperative workflows</li>
+		</ul>
+	  </div>
+	</section>
 
-  <hr>
 
-  <h2>🚀 Features</h2>
-  <ul>
-    <li>🧭 Computed Tomography (CT) based fenestration design</li>
-    <li>📏 Baseline distance and clock position input with dual referencing</li>
-    <li>🎯 Multiple fenestration types and diameters</li>
-    <li>🖼 2D and 3D visual preview (interactive)</li>
-    <li>📄 PDF export with surgical planning data</li>
-    <li>🧠 Ideal for FEVAR / PMEG preoperative workflows</li>
-  </ul>
+    <hr class="my-10">
 
-  <hr id="download">
+    <section id="download" class="mb-16 text-center scroll-mt-24">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-6">📦 Download</h3>
+      <p>
+        <a href="https://github.com/BenBalder/PUNCHplan/releases" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">⬇️ Download the latest version from the Releases tab</a>
+      </p>
 
-  <h2>📦 Download</h2>
-  <p><strong>➡️ <a href="https://github.com/BenBalder/PUNCHplan/releases">Download the latest version from the Releases tab</a></strong></p>
+      <div class="bg-yellow-100 text-gray-800 border-l-4 border-yellow-400 p-4 mt-6 text-left">
+        <p class="font-semibold mb-2">⚠️ Windows SmartScreen & Antivirus Notice</p>
+        <p>Since the software does not yet have a digital signature (it costs a lot!), some operating systems (especially Windows) may display a <strong>warning</strong> when launching the .exe file, such as: “Windows protected your PC” or “Unknown publisher”.</p>
+        <p class="mt-2">This is standard behavior for unsigned applications and does not mean the file is dangerous. <strong>EndoDraft</strong> has been thoroughly tested and is <strong>totally safe to use</strong>, so you can ignore the warning.</p>
+        <p class="mt-2">✅ If this happens, to proceed on Windows:</p>
+        <ul class="list-disc list-inside">
+          <li>Click <strong>“More info”</strong></li>
+          <li>Then select <strong>“Run anyway”</strong></li>
+        </ul>
+        <p class="mt-2">No installation required. The program runs as a standalone <code class="bg-gray-200 px-1 rounded">.exe</code>.</p>
+      </div>
+    </section>
 
-  <div class="note">
-    <strong>⚠️ Windows SmartScreen & Antivirus Notice</strong><br>
-    Since the software does not yet have a digital signature (it costs a lot!), some operating systems (especially Windows) may display a <strong>warning</strong> when launching the .exe file, such as:
-    “Windows protected your PC” or “Unknown publisher”.<br><br>
-    This is standard behavior for unsigned applications and does not mean the file is dangerous.<br>
-    <strong>EndoDraft</strong> has been thoroughly tested and is <strong>totally safe to use</strong>, so you can ignore the warning.<br><br>
-    ✅ If this happens, to proceed on Windows:
-    <ul>
-      <li>Click <strong>“More info”</strong></li>
-      <li>Then select <strong>“Run anyway”</strong></li>
-    </ul>
-    No installation required. The program runs as a standalone <code>.exe</code>.
-  </div>
+    <hr class="my-10">
 
-  <hr>
+    <section id="download" class="mb-16 text-center scroll-mt-24">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-6">🖥 System Requirements</h3>
+      <ul class="list-disc list-inside text-gray-750 inline-block text-left">
+        <li>Windows 10 or newer (64-bit)</li>
+        <li>No installation necessary</li>
+        <li>No internet connection required (only for software updates)</li>
+        <li>The software is currently optimized for <strong>Windows</strong>, macOS or Linux users can have issues. Development is in progress.</li>
+      </ul>
+    </section>
 
-  <h2>🖥 System Requirements</h2>
-  <ul>
-    <li>Windows 10 or newer (64-bit)</li>
-    <li>No installation necessary</li>
-    <li>No internet connection required (only for software updates)</li>
-    <li>The software is currently optimized for <strong>Windows</strong>, macOS or Linux users can have issues. Development is in progress.</li>
-  </ul>
+    <hr class="my-10">
 
-  <hr>
+    <section id="contact" class="mb-16 text-center scroll-mt-24">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">📧 Feedback or Contact</h3>
+      <p>If you have questions, feature requests, or feedback, feel free to contact me through the software!</p>
+      <p class="mt-4">
+        <a href="#download" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">➡️ Download</a>
+        <span class="mx-2">or</span>
+        <a href="https://github.com/BenBalder/PUNCHplan/issues" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Open an Issue</a>
+      </p>
+    </section>
 
-  <h2>📧 Feedback or Contact</h2>
-  <p>If you have questions, feature requests, or feedback, feel free to contact me through the software!</p>
-  <p>
-    <p><strong>➡️ <a href="#download">Download</a></strong></p>
-    or <a href="https://github.com/BenBalder/PUNCHplan/issues">open an issue</a> (GitHub account required)
-  </p>
+    <hr class="my-10">
 
-  <hr>
+    <section id="download" class="mb-16 text-center scroll-mt-24">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">📜 License</h3>
+      <p class="text-sm text-gray-700">&copy; 2025 Bendegúz Juhos</p>
+      <ul class="list-disc list-inside text-gray-750 inline-block text-left mt-4">
+        <li>This software (EndoDraft®) is provided free of charge for academic and personal use only.</li>
+        <li>Redistribution, modification, or commercial use of the software is strictly prohibited without prior written permission from the author.</li>
+        <li>The software is distributed as a compiled executable (.exe) file only. No source code is provided.</li>
+        <li>The software is provided "as is", without warranty of any kind, express or implied.</li>
+      </ul>
+      <p class="mt-4">By using this software, you agree to the terms above.</p>
+    </section>
+  </main>
 
-  <h2>📜 License</h2>
-  <p><strong>EndoDraft® - Software License Agreement</strong></p>
-  <p>
-    &copy; 2025 Bendegúz Juhos
-  </p>
-  <ul>
-    <li>This software (EndoDraft®) is provided free of charge for academic and personal use only.</li>
-    <li>Redistribution, modification, or commercial use of the software is strictly prohibited without prior written permission from the author.</li>
-    <li>The software is distributed as a compiled executable (.exe) file only. No source code is provided.</li>
-    <li>The software is provided "as is", without warranty of any kind, express or implied.</li>
-  </ul>
-  <p>By using this software, you agree to the terms above.</p>
-
-  <hr>
-  <p>&copy; 2025 Bendegúz Juhos - Semmelweis Aortic Center, Department of Interventional Radiology, Heart and Vascular Centre, Semmelweis University, Budapest, Hungary</p>
-
+  <footer class="text-center py-6 text-sm text-gray-700 border-t">
+    &copy; 2025 Bendegúz Juhos - Semmelweis Aortic Center, Department of Interventional Radiology, Heart and Vascular Centre, Semmelweis University, Budapest, Hungary
+  </footer>
 </body>
 </html>
