@@ -36,7 +36,7 @@ It enables precise design of fenestration locations, visual feedback in 2D/3D, a
 
 ## 📦 Download
 
-> **➡️ [Download the latest version from the Releases tab](https://github.com/BenBalder/PUNCHplan/releases)**
+> **➡️ [Download the latest version from the Releases tab](https://github.com/BenBalder/EndoDraft/releases)**
 
 **⚠️ Windows SmartScreen & Antivirus Notice**<br>
 
@@ -68,7 +68,7 @@ No installation required. The program runs as a standalone `.exe`.
 
 If you have questions, feature requests, or feedback, feel free to contact me through the software:
 
-> **➡️ [Download](#-download)**  or [open an issue](https://github.com/BenBalder/PUNCHplan/issues) (GitHub account required)
+> **➡️ [Download](#-download)**  or [open an issue](https://github.com/BenBalder/EndoDraft/issues) (GitHub account required)
 
 ---
 
