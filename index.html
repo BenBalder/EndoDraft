@@ -8,6 +8,18 @@
   <link rel="canonical" href="https://www.endodraft.com/" />
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- SEO + megosztás -->
+  <meta name="description" content="EndoDraft® – lightweight surgical planning software for physician-modified endografts (PMEGs), with 2D/3D visualization and PDF export.">
+  <meta property="og:title" content="EndoDraft® – Surgical Planning Software">
+  <meta property="og:description" content="Lightweight surgical planning software for physician-modified endografts (PMEGs), with 2D/3D visualization and PDF export.">
+  <meta property="og:image" content="https://www.endodraft.com/media/endodraft_picture.PNG">
+  <meta property="og:url" content="https://www.endodraft.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EndoDraft® – Surgical Planning Software">
+  <meta name="twitter:description" content="Lightweight surgical planning software for physician-modified endografts (PMEGs), with 2D/3D visualization and PDF export.">
+  <meta name="twitter:image" content="https://www.endodraft.com/media/endodraft_picture.PNG">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -16,55 +28,67 @@
     "url": "https://www.endodraft.com"
   }
   </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-indigo-700">EndoDraft®</h1>
-      <nav class="space-x-4">
-        <a href="#features" class="text-gray-750 hover:text-indigo-600">Features</a>
-        <a href="#download" class="text-gray-750 hover:text-indigo-600">Download</a>
-        <a href="#contact" class="text-gray-750 hover:text-indigo-600">Contact</a>
-      </nav>
-    </div>
-  </header>
+	<header class="bg-white/70 backdrop-blur-md shadow-md sticky top-0 z-50">
+	  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+		<h1 class="text-2xl font-bold text-indigo-700">EndoDraft®</h1>
+		<nav class="flex space-x-2">
+		  <a href="#features" class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-indigo-600 hover:text-white transition text-sm font-medium">Features</a>
+		  <a href="#download" class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-indigo-600 hover:text-white transition text-sm font-medium">Download</a>
+		  <a href="#contact" class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-indigo-600 hover:text-white transition text-sm font-medium">Contact</a>
+		</nav>
+	  </div>
+	</header>
+
 
   <main class="max-w-[1200px] mx-auto px-6 py-12">
-    <section class="text-center mb-16">
+    <!-- Hero szekció -->
+    <section class="text-center mb-16 rounded-xl p-10 bg-gradient-to-r from-indigo-50 to-white shadow-sm">
       <h2 class="text-4xl font-bold text-gray-900 mb-4">EndoDraft® – Surgical Planning Software for Aneurysm Fenestration Templates</h2>
       <p class="text-lg text-gray-750 text-justify">🛠️ <strong>EndoDraft</strong> is a lightweight, standalone surgical planning software designed to assist interventional radiologists and vascular surgeons in planning <strong>physician-modified endografts (PMEGs)</strong>.
       It enables precise design of fenestration locations, visual feedback in 2D/3D, and exports print-ready plans for intraoperative use.</p>
-      <div class="mt-6 flex flex-col items-center justify-center">
-        <a href="#download" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">
+      <div class="mt-6 flex flex-col items-center justify-center gap-3">
+        <a href="#download" class="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg hover:bg-indigo-700 transition text-lg font-semibold shadow">
           ➡️ Download Latest Version
         </a>
         <span id="total-downloads-badge"
-              class="hidden inline-flex items-center rounded-full bg-green-300 text-indigo-800 text-sm font-medium px-3 py-1 mt-2"
+              class="hidden inline-flex items-center rounded-full bg-green-300 text-indigo-800 text-sm font-medium px-4 py-2 shadow"
               title="Total downloads from GitHub releases">
           ⏳ counting…
+        </span>
+        <span id="latest-release"
+              class="hidden text-sm text-gray-600">
+          ⏳ Fetching latest release…
         </span>
       </div>
     </section>
 
     <hr class="my-10">
 
-    <section class="text-center mb-16">
+    <section id="demo" class="text-center mb-16">
       <h3 class="text-2xl font-semibold mb-6">🎥 Demo</h3>
       <div class="grid gap-6">
         <div class="flex flex-wrap justify-center gap-4">
           <div class="flex flex-row flex-wrap justify-center gap-4">
-            <img src="./media/2d_view.PNG" width="400" alt="2D View" class="rounded shadow">
-            <img src="./media/punchplan_demo_tube_inf.gif" width="290" alt="3D Demo" class="rounded shadow">
-            <img src="./media/punchplan_demo_bif_inf.gif" width="310" alt="3D Demo" class="rounded shadow">
+            <img src="./media/2d_view.PNG" width="400" alt="2D View" class="rounded shadow hover:shadow-lg transition">
+            <img src="./media/punchplan_demo_tube_inf.gif" width="290" alt="3D Demo" class="rounded shadow hover:shadow-lg transition">
+            <img src="./media/punchplan_demo_bif_inf.gif" width="310" alt="3D Demo" class="rounded shadow hover:shadow-lg transition">
           </div>
           <p class="text-sm text-gray-550 italic">Sample 2D and rotating 3D preview of a fenestrated stent graft designed with EndoDraft.</p>
           <div class="flex flex-row flex-wrap justify-center gap-4">
-            <img src="./media/sample_aaa.png" width="535" alt="Sample Aneurysm" class="rounded shadow">
-            <img src="./media/punchplan_method.jpg" width="500" alt="Punchcard deployment" class="rounded shadow">
+            <img src="./media/sample_aaa.png" width="535" alt="Sample Aneurysm" class="rounded shadow hover:shadow-lg transition">
+            <img src="./media/punchplan_method.jpg" width="500" alt="Punchcard deployment" class="rounded shadow hover:shadow-lg transition">
           </div>
           <p class="text-sm text-gray-550 italic">Sample graphics and photo about deploying a laser printed punch card made in EndoDraft.</p>
           <div class="flex justify-center">
-            <img src="./media/endodraft_picture.PNG" width="1050" alt="Screenshot" class="rounded shadow">
+            <img src="./media/endodraft_picture.PNG" width="1050" alt="Screenshot" class="rounded shadow hover:shadow-lg transition">
           </div>
           <p class="text-sm text-gray-550 italic">Screenshot while using the software.</p>
         </div>
@@ -75,29 +99,29 @@
 
 	<section id="features" class="mb-16 text-center scroll-mt-24">
 	  <h3 class="text-2xl font-semibold text-gray-800 mb-6">🚀 Features</h3>
-	  
-	  <div class="flex justify-center">
-		<ul class="grid sm:grid-cols-2 gap-4 text-gray-750 text-left">
-		  <li>🧭 Computed Tomography (CT) based fenestration design</li>
-		  <li>📏 Baseline distance and clock position input with dual referencing</li>
-		  <li>🎯 Multiple fenestration types and diameters</li>
-		  <li>🖼 2D and 3D visual preview (interactive)</li>
-		  <li>📄 PDF export with surgical planning data</li>
-		  <li>🧠 Ideal for FEVAR / PMEG preoperative workflows</li>
-		</ul>
+	  <div class="grid sm:grid-cols-2 gap-6">
+	    <div class="bg-white shadow-md rounded-xl p-6 text-left space-y-2 hover:shadow-lg hover:-translate-y-1 transition">
+	      <p>🧭 Computed Tomography (CT) based fenestration design</p>
+	      <p>📏 Baseline distance and clock position input with dual referencing</p>
+	      <p>🎯 Multiple fenestration types and diameters</p>
+	    </div>
+	    <div class="bg-white shadow-md rounded-xl p-6 text-left space-y-2 hover:shadow-lg hover:-translate-y-1 transition">
+	      <p>🖼 2D and 3D visual preview (interactive)</p>
+	      <p>📄 PDF export with surgical planning data</p>
+	      <p>🧠 Ideal for FEVAR / PMEG preoperative workflows</p>
+	    </div>
 	  </div>
 	</section>
-
 
     <hr class="my-10">
 
     <section id="download" class="mb-16 text-center scroll-mt-24">
       <h3 class="text-2xl font-semibold text-gray-800 mb-6">📦 Download</h3>
       <p>
-        <a href="https://github.com/BenBalder/EndoDraft/releases" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">⬇️ Download the latest version from the Repository</a>
+        <a href="https://github.com/BenBalder/EndoDraft/releases" class="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg hover:bg-indigo-700 transition shadow">⬇️ Download the latest version from the Repository</a>
       </p>
 
-      <div class="bg-yellow-100 text-gray-800 border-l-4 border-yellow-400 p-4 mt-6 text-left">
+      <div class="bg-yellow-100 text-gray-800 border-l-4 border-yellow-400 p-4 mt-6 text-left rounded">
         <p class="font-semibold mb-2">⚠️ Windows SmartScreen & Antivirus Notice</p>
         <p>Since the software does not yet have a digital signature (it costs a lot!), some operating systems (especially Windows) may display a <strong>warning</strong> when launching the .exe file, such as: “Windows protected your PC” or “Unknown publisher”.</p>
         <p class="mt-2">This is standard behavior for unsigned applications and does not mean the file is dangerous. <strong>EndoDraft</strong> has been thoroughly tested and is <strong>totally safe to use</strong>, so you can ignore the warning.</p>
@@ -114,25 +138,64 @@
 
     <section id="download" class="mb-16 text-center scroll-mt-24">
       <h3 class="text-2xl font-semibold text-gray-800 mb-6">🖥 System Requirements</h3>
-      <ul class="list-disc list-inside text-gray-750 inline-block text-left">
-        <li>Windows 10 or newer (64-bit)</li>
-        <li>No installation necessary</li>
-        <li>No internet connection required (only for software updates)</li>
-        <li>The software is currently optimized for <strong>Windows</strong>, macOS or Linux users can have issues. Development is in progress.</li>
-      </ul>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition">Windows 10 or newer (64-bit)</div>
+        <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition">No installation necessary</div>
+        <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition">No internet connection required (only for software updates)</div>
+        <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition">Optimized for <strong>Windows</strong>; macOS/Linux may have issues</div>
+      </div>
     </section>
 
     <hr class="my-10">
 
-    <section id="contact" class="mb-16 text-center scroll-mt-24">
-      <h3 class="text-2xl font-semibold text-gray-800 mb-4">📧 Feedback or Contact</h3>
-      <p>If you have questions, feature requests, or feedback, feel free to contact me through the software!</p>
-      <p class="mt-4">
-        <a href="#download" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">➡️ Download</a>
-        <span class="mx-2">or</span>
-        <a href="https://github.com/BenBalder/EndoDraft/issues" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Open an Issue</a>
-      </p>
-    </section>
+	<section id="contact" class="mb-16 text-center scroll-mt-24">
+	  <h3 class="text-2xl font-semibold text-gray-800 mb-4">📧 Feedback or Contact</h3>
+	  <p class="mb-8">If you have questions, feature requests, or feedback, feel free to contact us directly on LinkedIn:</p>
+
+	  <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
+		<!-- Bendegúz -->
+		<div class="bg-white shadow-md rounded-xl p-6 flex flex-col items-center">
+		  <img src="https://media.licdn.com/dms/image/v2/D4D03AQGjy4ZGtHlYOQ/profile-displayphoto-crop_800_800/B4DZjdbY8hG8AI-/0/1756061602719?e=1761177600&v=beta&t=3TnaRyTWgFiUFHHSxrULSsHn2xg9RrxjwPe4RtqJ2hI"
+			   alt="Bendegúz Juhos" class="w-24 h-24 rounded-full shadow mb-4">
+		  <h4 class="text-lg font-semibold">Bendegúz Juhos</h4>
+		  <p class="text-gray-600 text-sm mb-3">Electrical Engineer MSc, PhD Student<br>Semmelweis University</p>
+		  <a href="https://www.linkedin.com/in/bendeguz-juhos/" target="_blank"
+			 class="inline-flex items-center bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition text-sm">
+			🔗 LinkedIn Profile
+		  </a>
+		</div>
+
+		<!-- Csaba -->
+		<div class="bg-white shadow-md rounded-xl p-6 flex flex-col items-center">
+		  <img src="https://media.licdn.com/dms/image/v2/D4D03AQFOjgO6hbBHvw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1689797717321?e=2147483647&v=beta&t=wyev-6XgzJI5nHku_u-aRbDSreeYlND6m36R96Q7Nvg"
+			   alt="Csaba Csobay-Novák" class="w-24 h-24 rounded-full shadow mb-4">
+		  <h4 class="text-lg font-semibold">Csaba Csobay-Novák MD, PhD</h4>
+		  <p class="text-gray-600 text-sm mb-3">Interventional Radiologist, PMEG professional<br>Semmelweis University</p>
+		  <a href="https://www.linkedin.com/in/csobay/" target="_blank"
+			 class="inline-flex items-center bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition text-sm">
+			🔗 LinkedIn Profile
+		  </a>
+		</div>
+	  </div>
+
+	  <!-- OR separator -->
+	  <div class="my-6 flex items-center justify-center">
+		<hr class="w-1/4 border-gray-300">
+		<span class="mx-3 text-gray-500 font-medium">OR</span>
+		<hr class="w-1/4 border-gray-300">
+	  </div>
+
+	  <!-- GitHub gomb -->
+	  <div class="mt-4">
+		<a href="https://github.com/BenBalder/EndoDraft/issues" target="_blank"
+		   class="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg hover:bg-indigo-700 transition shadow">
+		  Open an Issue on GitHub
+		</a>
+	  </div>
+	</section>
+
+
+
 
     <hr class="my-10">
 
@@ -149,42 +212,59 @@
     </section>
   </main>
 
-  <footer class="text-center py-6 text-sm text-gray-700 border-t">
+  <!-- Dark footer -->
+  <footer class="text-center py-6 text-sm text-gray-200 bg-gray-900">
     &copy; 2025 Bendegúz Juhos - Semmelweis Aortic Center, Department of Interventional Radiology, Heart and Vascular Centre, Semmelweis University, Budapest, Hungary
   </footer>
 
-  <!-- GitHub total downloads badge script -->
+  <!-- GitHub total downloads + latest release script -->
   <script>
     (function () {
       const OWNER = "BenBalder";
       const REPO  = "EndoDraft";
       const API   = `https://api.github.com/repos/${OWNER}/${REPO}/releases`;
       const BADGE_ID = "total-downloads-badge";
+      const LATEST_ID = "latest-release";
 
-      async function fetchTotalDownloads() {
+      async function fetchReleases() {
         const resp = await fetch(API);
         if (!resp.ok) throw new Error("GitHub API error");
-        const releases = await resp.json();
-        let total = 0;
-        for (const rel of releases) {
-          for (const a of rel.assets || []) {
-            total += a.download_count || 0;
-          }
-        }
-        return total;
+        return resp.json();
       }
 
       function showBadge(total) {
         const el = document.getElementById(BADGE_ID);
-        if (!el) return;
-        el.textContent = `⬇️ Total downloads: ${total.toLocaleString()}`;
-        el.classList.remove("hidden");
+        if (el) {
+          el.textContent = `⬇️ Total downloads: ${total.toLocaleString()}`;
+          el.classList.remove("hidden");
+        }
       }
 
-      fetchTotalDownloads()
-        .then(showBadge)
+      function showLatest(release) {
+        const el = document.getElementById(LATEST_ID);
+        if (el) {
+          const date = new Date(release.published_at).toLocaleDateString();
+          el.textContent = `📦 Latest release: ${release.tag_name} (${date})`;
+          el.classList.remove("hidden");
+        }
+      }
+
+      fetchReleases()
+        .then(releases => {
+          let total = 0;
+          for (const rel of releases) {
+            for (const a of rel.assets || []) {
+              total += a.download_count || 0;
+            }
+          }
+          showBadge(total);
+          if (releases.length > 0) {
+            showLatest(releases[0]);
+          }
+        })
         .catch(() => {
           document.getElementById(BADGE_ID)?.classList.add("hidden");
+          document.getElementById(LATEST_ID)?.classList.add("hidden");
         });
     })();
   </script>
