@@ -34,9 +34,16 @@
       <h2 class="text-4xl font-bold text-gray-900 mb-4">EndoDraft® – Surgical Planning Software for Aneurysm Fenestration Templates</h2>
       <p class="text-lg text-gray-750 text-justify">🛠️ <strong>EndoDraft</strong> is a lightweight, standalone surgical planning software designed to assist interventional radiologists and vascular surgeons in planning <strong>physician-modified endografts (PMEGs)</strong>.
       It enables precise design of fenestration locations, visual feedback in 2D/3D, and exports print-ready plans for intraoperative use.</p>
-      <p class="mt-6">
-        <a href="#download" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">➡️ Download Latest Version</a>
-      </p>
+      <div class="mt-6 flex flex-col items-center justify-center">
+        <a href="#download" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">
+          ➡️ Download Latest Version
+        </a>
+        <span id="total-downloads-badge"
+              class="hidden inline-flex items-center rounded-full bg-green-300 text-indigo-800 text-sm font-medium px-3 py-1 mt-2"
+              title="Total downloads from GitHub releases">
+          ⏳ counting…
+        </span>
+      </div>
     </section>
 
     <hr class="my-10">
@@ -145,5 +152,41 @@
   <footer class="text-center py-6 text-sm text-gray-700 border-t">
     &copy; 2025 Bendegúz Juhos - Semmelweis Aortic Center, Department of Interventional Radiology, Heart and Vascular Centre, Semmelweis University, Budapest, Hungary
   </footer>
+
+  <!-- GitHub total downloads badge script -->
+  <script>
+    (function () {
+      const OWNER = "BenBalder";
+      const REPO  = "EndoDraft";
+      const API   = `https://api.github.com/repos/${OWNER}/${REPO}/releases`;
+      const BADGE_ID = "total-downloads-badge";
+
+      async function fetchTotalDownloads() {
+        const resp = await fetch(API);
+        if (!resp.ok) throw new Error("GitHub API error");
+        const releases = await resp.json();
+        let total = 0;
+        for (const rel of releases) {
+          for (const a of rel.assets || []) {
+            total += a.download_count || 0;
+          }
+        }
+        return total;
+      }
+
+      function showBadge(total) {
+        const el = document.getElementById(BADGE_ID);
+        if (!el) return;
+        el.textContent = `⬇️ Total downloads: ${total.toLocaleString()}`;
+        el.classList.remove("hidden");
+      }
+
+      fetchTotalDownloads()
+        .then(showBadge)
+        .catch(() => {
+          document.getElementById(BADGE_ID)?.classList.add("hidden");
+        });
+    })();
+  </script>
 </body>
 </html>
