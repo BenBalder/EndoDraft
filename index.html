@@ -28,6 +28,11 @@
     "url": "https://www.endodraft.com"
   }
   </script>
+  
+  <!-- Markdown parser + sanitize -->
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+
 
   <style>
     html {
@@ -35,13 +40,14 @@
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-100 text-gray-800 font-sans">
   <header class="bg-white/70 backdrop-blur-md shadow-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-indigo-700">EndoDraft®</h1>
       <nav class="flex space-x-2">
         <a href="#features" class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-indigo-600 hover:text-white transition text-sm font-medium">Features</a>
         <a href="#download" class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-indigo-600 hover:text-white transition text-sm font-medium">Download</a>
+		<a href="#release-notes" class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-indigo-600 hover:text-white transition text-sm font-medium">Release Notes</a>
         <a href="#contact" class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-indigo-600 hover:text-white transition text-sm font-medium">Contact</a>
       </nav>
     </div>
@@ -136,6 +142,23 @@
         <p class="mt-2">No installation required. The program runs as a standalone <code class="bg-gray-200 px-1 rounded">.exe</code>.</p>
       </div>
     </section>
+	
+	<hr class="my-10">
+
+	<section id="release-notes" class="mb-16 text-center scroll-mt-24">
+	  <h3 class="text-2xl font-semibold text-gray-800 mb-6">📝 Release Notes</h3>
+
+	  <!-- ide töltjük be a kiadásokat -->
+	  <div id="releases" class="grid gap-4 text-left max-w-3xl mx-auto">
+		<div class="text-gray-500 text-sm">Loading latest releases…</div>
+	  </div>
+
+	  <p class="mt-6 text-sm">
+		Full history on GitHub:
+		<a class="text-indigo-600 underline" href="https://github.com/BenBalder/EndoDraft/releases" target="_blank" rel="noopener">Releases</a>
+	  </p>
+	</section>
+
 
     <hr class="my-10">
 
@@ -199,17 +222,26 @@
 
     <hr class="my-10">
 
-    <section id="download" class="mb-16 text-center scroll-mt-24">
-      <h3 class="text-2xl font-semibold text-gray-800 mb-4">📜 License</h3>
-      <p class="text-sm text-gray-700">&copy; 2025 Bendegúz Juhos</p>
-      <ul class="list-disc list-inside text-gray-750 inline-block text-left mt-4">
-        <li>This software (EndoDraft®) is provided free of charge for academic and personal use only.</li>
-        <li>Redistribution, modification, or commercial use of the software is strictly prohibited without prior written permission from the author.</li>
-        <li>The software is distributed as a compiled executable (.exe) file only. No source code is provided.</li>
-        <li>The software is provided "as is", without warranty of any kind, express or implied.</li>
-      </ul>
-      <p class="mt-4">By using this software, you agree to the terms above.</p>
-    </section>
+    <section id="license" class="mb-16 text-center scroll-mt-24">
+	  <h3 class="text-2xl font-semibold text-gray-800 mb-6">📜 License</h3>
+
+	  <div class="bg-white shadow-md rounded-xl p-6 max-w-3xl mx-auto text-left hover:shadow-lg hover:-translate-y-1 transition">
+		<p class="text-sm text-gray-700 mb-4 text-center">
+		  <strong>&copy; 2025 Bendegúz Juhos</strong>
+		</p>
+		<ul class="list-disc pl-6 text-gray-700 space-y-2 text-sm marker:text-gray-500">
+		  <li><strong>EndoDraft®</strong> is provided free of charge for academic and personal use only.</li>
+		  <li>Redistribution, modification, or commercial use of the software is strictly prohibited without prior written permission from the author.</li>
+		  <li>The software is distributed as a compiled executable (<code class="bg-gray-100 px-1 rounded">.exe</code>) file only. No source code is provided.</li>
+		  <li>The software is provided “as is”, without warranty of any kind, express or implied.</li>
+		</ul>
+		<p class="mt-4 text-sm text-gray-700 italic text-center">
+		  By using this software, you agree to the terms above.
+		</p>
+	  </div>
+	</section>
+
+
   </main>
 
   <!-- Dark footer -->
@@ -218,92 +250,163 @@
   </footer>
 
   <!-- GitHub total downloads + latest release script -->
-  <script>
-    (function () {
-      const OWNER = "BenBalder";
-      const REPO  = "EndoDraft";
-      const API_ALL    = `https://api.github.com/repos/${OWNER}/${REPO}/releases`;
-      const API_LATEST = `https://api.github.com/repos/${OWNER}/${REPO}/releases/latest`;
+	<script>
+	  (function () {
+		const OWNER = "BenBalder";
+		const REPO  = "EndoDraft";
+		const API_ALL    = `https://api.github.com/repos/${OWNER}/${REPO}/releases`;
+		const API_LATEST = `https://api.github.com/repos/${OWNER}/${REPO}/releases/latest`;
 
-      const BADGE_ID  = "total-downloads-badge";
-      const LATEST_ID = "latest-release";
-      const DL_BTN_ID = "download-btn";
+		const BADGE_ID  = "total-downloads-badge";
+		const LATEST_ID = "latest-release";
+		const DL_BTN_ID = "download-btn";
 
-      async function fetchJSON(url) {
-        const resp = await fetch(url, {
-          headers: { "Accept": "application/vnd.github+json" }
-        });
-        if (!resp.ok) throw new Error(`GitHub API error: ${resp.status}`);
-        return resp.json();
-      }
+		async function fetchJSON(url) {
+		  const resp = await fetch(url, { headers: { "Accept": "application/vnd.github+json" } });
+		  if (!resp.ok) throw new Error(`GitHub API error: ${resp.status}`);
+		  return resp.json();
+		}
 
-      function showBadge(total) {
-        const el = document.getElementById(BADGE_ID);
-        if (el) {
-          el.textContent = `⬇️ Total downloads: ${total.toLocaleString()}`;
-          el.classList.remove("hidden");
-        }
-      }
+		function showBadge(total) {
+		  const el = document.getElementById(BADGE_ID);
+		  if (el) {
+			el.textContent = `⬇️ Total downloads: ${total.toLocaleString()}`;
+			el.classList.remove("hidden");
+		  }
+		}
 
-      function showLatest(release) {
-        const el = document.getElementById(LATEST_ID);
-        if (el && release) {
-          const date = new Date(release.published_at).toLocaleDateString();
-          el.textContent = `📦 Latest release: ${release.tag_name} (${date})`;
-          el.classList.remove("hidden");
-        }
-      }
+		function showLatest(release) {
+		  const el = document.getElementById(LATEST_ID);
+		  if (el && release) {
+			const date = new Date(release.published_at).toLocaleDateString();
+			el.textContent = `📦 Latest release: ${release.tag_name} (${date})`;
+			el.classList.remove("hidden");
+		  }
+		}
 
-      function setDirectDownload(assetUrl) {
-        const btn = document.getElementById(DL_BTN_ID);
-        if (btn && assetUrl) {
-          btn.setAttribute("href", assetUrl);
-          btn.removeAttribute("target");
-          btn.removeAttribute("rel");
-        }
-      }
+		function setDirectDownload(assetUrl) {
+		  const btn = document.getElementById(DL_BTN_ID);
+		  if (btn && assetUrl) {
+			btn.setAttribute("href", assetUrl);
+			btn.removeAttribute("target");
+			btn.removeAttribute("rel");
+		  }
+		}
 
-      function pickAsset(latestRelease) {
-        const assets = latestRelease.assets || [];
-        if (!assets.length) return null;
+		function pickAsset(latestRelease) {
+		  const assets = latestRelease.assets || [];
+		  if (!assets.length) return null;
+		  const lower = (name) => (name || "").toLowerCase();
+		  const byExt = (ext) => assets.find(a => lower(a.name).endsWith(ext));
+		  const zip = byExt(".zip");
+		  const exe = byExt(".exe");
+		  const chosen = zip || exe || assets[0];
+		  return chosen?.browser_download_url || null;
+		}
 
-        // Prefer ZIP, then EXE, otherwise the first asset
-        const lower = (name) => (name || "").toLowerCase();
-        const byExt = (ext) => assets.find(a => lower(a.name).endsWith(ext));
-        const zip = byExt(".zip");
-        const exe = byExt(".exe");
-        const chosen = zip || exe || assets[0];
-        return chosen?.browser_download_url || null;
-      }
+		// === Release Notes renderelése (csak a legutolsó) ===
+		function renderReleaseNotes(releases) {
+		  const wrap = document.getElementById("releases");
+		  if (!wrap) return;
 
-      // 1) Összes letöltés összesítése + alap latest infó
-      fetchJSON(API_ALL)
-        .then(releases => {
-          let total = 0;
-          for (const rel of releases) {
-            for (const a of (rel.assets || [])) {
-              total += a.download_count || 0;
-            }
-          }
-          showBadge(total);
-          if (releases.length > 0) showLatest(releases[0]);
-        })
-        .catch(() => {
-          document.getElementById(BADGE_ID)?.classList.add("hidden");
-          document.getElementById(LATEST_ID)?.classList.add("hidden");
-        });
+		  // "Loading latest releases…" törlése
+		  wrap.innerHTML = "";
 
-      // 2) Legfrissebb release közvetlen letöltési link
-      fetchJSON(API_LATEST)
-        .then(latest => {
-          const url = pickAsset(latest);
-          if (url) setDirectDownload(url);
-          showLatest(latest); // pontosabb, mint az /releases első eleme
-        })
-        .catch(() => {
-          // Fallback: marad a Releases oldal
-        });
-    })();
-  </script>
+		  if (!releases || releases.length === 0) {
+			wrap.innerHTML = `<div class="text-gray-500 text-sm">No releases yet.</div>`;
+			return;
+		  }
+
+		  // Rendezés idő szerint (legújabb elöl)
+		  releases.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+
+		  // 🔹 CSAK az első (legfrissebb) release kell
+		  const rel = releases[0];
+
+		  const date = rel.published_at ? new Date(rel.published_at).toLocaleDateString() : "";
+		  const rawMd = (rel.body || "").trim();
+
+		  // Markdown → HTML, majd tisztítás
+		  const html = DOMPurify.sanitize(marked.parse(rawMd));
+
+		  // Kártya
+		  const card = document.createElement("article");
+		  card.className = "bg-white p-5 rounded-xl shadow hover:shadow-md transition";
+
+		  card.innerHTML = `
+			<h4 class="font-semibold text-lg">
+			  ${rel.tag_name}
+			  <span class="text-gray-500 text-sm"> ${date ? `(${date})` : ""}</span>
+			</h4>
+			<div class="prose prose-sm max-w-none mt-2 release-body"></div>
+			<div class="mt-3">
+			  <a class="text-indigo-600 underline text-sm" href="${rel.html_url}" target="_blank" rel="noopener">
+				View on GitHub
+			  </a>
+			</div>
+		  `;
+
+		  const bodyEl = card.querySelector(".release-body");
+		  bodyEl.innerHTML = html;
+
+		  // Képek: legyenek reszponzívak + lazy
+		  bodyEl.querySelectorAll("img").forEach(img => {
+			img.classList.add("rounded", "shadow", "my-2", "max-w-full", "h-auto");
+			img.setAttribute("loading", "lazy");
+		  });
+
+		  // Linkek: új lapon nyíljanak
+		  bodyEl.querySelectorAll("a").forEach(a => {
+			a.setAttribute("target", "_blank");
+			a.setAttribute("rel", "noopener");
+			a.classList.add("text-indigo-600", "underline");
+		  });
+
+		  // Listák és kódrészletek kis Tailwind finomhangolás
+		  bodyEl.querySelectorAll("ul").forEach(ul => ul.classList.add("list-disc", "pl-6", "my-2"));
+		  bodyEl.querySelectorAll("ol").forEach(ol => ol.classList.add("list-decimal", "pl-6", "my-2"));
+		  bodyEl.querySelectorAll("pre, code").forEach(el => el.classList.add("bg-gray-50", "rounded", "px-2", "py-1"));
+
+		  wrap.appendChild(card);
+		}
+
+
+		// 1️⃣ Összes release → letöltésszámláló + release notes
+		fetchJSON(API_ALL)
+		  .then(releases => {
+			// összes letöltés
+			let total = 0;
+			for (const rel of releases) {
+			  for (const a of (rel.assets || [])) total += a.download_count || 0;
+			}
+			showBadge(total);
+
+			// release notes
+			renderReleaseNotes(releases);
+
+			if (releases.length > 0) showLatest(releases[0]);
+		  })
+		  .catch(() => {
+			document.getElementById(BADGE_ID)?.classList.add("hidden");
+			document.getElementById("releases")?.replaceChildren(
+			  Object.assign(document.createElement("div"), {
+				className: "text-gray-500 text-sm",
+				textContent: "Couldn’t load releases."
+			  })
+			);
+		  });
+
+		// 2️⃣ Legfrissebb release → direkt letöltési link a fő „Download” gombra
+		fetchJSON(API_LATEST)
+		  .then(latest => {
+			const url = pickAsset(latest);
+			if (url) setDirectDownload(url);
+			showLatest(latest);
+		  })
+		  .catch(() => { /* fallback: marad a Releases oldal */ });
+	  })();
+	</script>
+
+
 </body>
 </html>
