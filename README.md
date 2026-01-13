@@ -1,6 +1,6 @@
 # EndoDraft® – Surgical Planning Software for Aneurysm Fenestration Templates
 
-🛠️ **EndoDraft** (previously PUNCHplan) is a lightweight, standalone surgical planning software designed to assist interventional radiologists and vascular surgeons in planning **physician-modified endografts (PMEGs)**.  
+🛠️ **EndoDraft** is a lightweight, standalone surgical planning software designed to assist interventional radiologists and vascular surgeons in planning **physician-modified endografts (PMEGs)**.  
 It enables precise design of fenestration locations, visual feedback in 2D/3D, and exports print-ready plans for intraoperative use.
 > **➡️ [Download](#-download)**
 ---
@@ -10,8 +10,8 @@ It enables precise design of fenestration locations, visual feedback in 2D/3D, a
 <!-- ![3D Model Preview](./media/punchplan_demo_inf.gif) -->
 <p align="center">
   <img src="./media/2d_view.PNG" width="340"/>
-  <img src="./media/endodraft_tube.gif" width="223"/>
-  <img src="./media/endodraft_bif.gif" width="237"/>
+  <img src="./media/endodraft_tubeform.gif" width="223"/>
+  <img src="./media/endodraft_bifurcation.gif" width="237"/>
 </p>
 *Sample 2D and rotating 3D preview of a fenestrated stent graft designed with EndoDraft.*
 <br><br>
@@ -75,7 +75,7 @@ If you have questions, feature requests, or feedback, feel free to contact me th
 ## 📜 License
 EndoDraft - Software License Agreement
 
-Copyright (c) 2025 Bendegúz Juhos
+Copyright (c) 2026 Bendegúz Juhos
 
 This software (EndoDraft) is provided free of charge for academic and personal use only.
 
@@ -87,6 +87,6 @@ By using this software, you agree to the terms above.
 
 ---
 
-© 2025 Bendegúz Juhos - Semmelweis Aortic Center, Department of Interventional Radiology, Heart and Vascular Centre, Semmelweis University, Budapest, Hungary
+© 2026 Bendegúz Juhos - Semmelweis Aortic Center, Department of Interventional Radiology, Heart and Vascular Centre, Semmelweis University, Budapest, Hungary
 
 
