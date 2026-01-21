@@ -1,0 +1,2 @@
+NEWSLETTER_URL=https://formspree.io/f/movwrrpb
+REPORT_URL=https://formspree.io/f/mqabnjab
