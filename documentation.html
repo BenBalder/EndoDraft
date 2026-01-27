@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EndoDraft ® – Documentation</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            oberon: {
+              dark: '#131c2e',    // Dark blue bg
+              light: '#1e293b',   // Card bg
+              accent: '#38bdf8',  // Tech blue
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Scrollbar styling for sidebar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #131c2e; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+    
+    .doc-content h2 { margin-top: 3rem; margin-bottom: 1.5rem; font-size: 1.75rem; font-weight: 700; color: white; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; }
+    .doc-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; color: #cbd5e1; }
+    .doc-content h4 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600; color: #94a3b8; }
+    .doc-content p { margin-bottom: 1rem; line-height: 1.7; color: #94a3b8; }
+    .doc-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #94a3b8; }
+    .doc-content ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; color: #94a3b8; }
+    .doc-content li { margin-bottom: 0.5rem; }
+    .doc-content strong { color: #38bdf8; }
+    .doc-content code { background-color: #0f172a; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-family: monospace; color: #e2e8f0; border: 1px solid #334155; font-size: 0.9em; }
+    
+    .key-bind { background-color: #1e293b; border: 1px solid #475569; border-radius: 4px; padding: 2px 6px; font-size: 0.8em; color: white; box-shadow: 0 2px 0 #0f172a; font-family: monospace; }
+  </style>
+</head>
+<body class="bg-oberon-dark text-slate-300 font-sans antialiased flex flex-col h-screen">
+
+  <header class="bg-oberon-dark/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50 shrink-0">
+    <div class="max-w-screen-2xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:-translate-x-1 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Home
+        </a>
+        <div class="h-6 w-px bg-slate-700 mx-2"></div>
+        <h1 class="text-xl font-bold text-white tracking-wide">
+          EndoDraft<span class="text-oberon-accent">®</span> <span class="text-slate-500 font-normal">Docs</span>
+        </h1>
+      </div>
+
+      <div class="relative hidden md:block w-96">
+        <input type="text" id="searchInput" onkeyup="filterDocs()" placeholder="Search documentation..." 
+               class="w-full bg-slate-800 border border-slate-700 text-white text-sm rounded-lg focus:ring-oberon-accent focus:border-oberon-accent block w-full pl-10 p-2.5 placeholder-slate-500 transition">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <svg class="w-4 h-4 text-slate-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex flex-1 overflow-hidden max-w-screen-2xl mx-auto w-full">
+    
+    <aside class="w-72 hidden md:flex flex-col border-r border-slate-700 bg-oberon-dark/50 overflow-y-auto shrink-0">
+      <nav class="p-4 space-y-1">
+        <p class="px-2 mb-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Getting Started</p>
+        <a href="#intro" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Introduction</a>
+        <a href="#install" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Installation & Update</a>
+        
+        <p class="px-2 mt-6 mb-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Project Setup</p>
+        <a href="#graft-params" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Graft Parameters</a>
+        <a href="#struts" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Endograft Struts</a>
+        
+        <p class="px-2 mt-6 mb-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Designing</p>
+        <a href="#add-fenestration" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Adding Fenestrations</a>
+        <a href="#interactive-edit" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Interactive Editing (2D)</a>
+        <a href="#3d-view" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">3D Visualization</a>
+        
+        <p class="px-2 mt-6 mb-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Output</p>
+        <a href="#export-pdf" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">PDF Export</a>
+        <a href="#export-gcode" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Laser Cutting (G-Code)</a>
+        <a href="#saving" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Save & Load Project</a>
+      </nav>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto scroll-smooth p-8 relative">
+      
+      <div class="md:hidden mb-6">
+        <input type="text" id="searchInputMobile" onkeyup="filterDocsMobile()" placeholder="Search..." 
+               class="w-full bg-slate-800 border border-slate-700 text-white text-sm rounded-lg p-3">
+      </div>
+
+      <div id="content-container" class="max-w-4xl mx-auto doc-content pb-20">
+        
+        <section id="intro" class="doc-section mb-12 scroll-mt-24">
+          <h2 class="text-3xl text-white font-bold mb-4 border-none">Introduction</h2>
+          <p class="text-lg text-slate-300 mb-6">
+            <strong>EndoDraft®</strong> is a specialized surgical planning tool for <strong>Physician-Modified Endografts (PMEGs)</strong> and FEVAR. It allows surgeons to digitally map fenestrations onto a specific endograft template, visualize the plan in 2D and 3D, and export precise PDF templates for intraoperative use.
+          </p>
+          <div class="bg-blue-900/20 border border-blue-500/30 p-4 rounded-lg flex gap-3">
+            <span class="text-2xl">💡</span>
+            <div>
+              <p class="mb-0 text-sm text-blue-200">
+                <strong>Key Capability:</strong> EndoDraft converts "clock positions" and longitudinal measurements into a 2D "unrolled" map, automatically handling the geometry calculations ($\pi \cdot d$).
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="install" class="doc-section mb-12 scroll-mt-24">
+          <h2>Installation & Updates</h2>
+          <p>EndoDraft is <strong>portable</strong>, meaning no installation wizard is required.</p>
+          <ul>
+            <li><strong>Download:</strong> Get the latest <code>.exe</code> or <code>.zip</code> from the website or GitHub releases.</li>
+            <li><strong>Run:</strong> Simply double-click <code>EndoDraft_vX.X.X.exe</code>.</li>
+            <li><strong>Updates:</strong> The software includes an <strong>Automatic Update</strong> feature. On startup, it checks GitHub for new versions. If found, it can download and restart automatically.</li>
+          </ul>
+          <p class="text-sm text-slate-500 italic">Note: If Windows SmartScreen appears, click "More Info" -> "Run Anyway". This is normal for unsigned medical software.</p>
+        </section>
+
+        <section id="graft-params" class="doc-section mb-12 scroll-mt-24">
+          <h2>Graft Parameters</h2>
+          <p>Before adding fenestrations, configure the baseline graft properties in the left sidebar.</p>
+          
+          <h3>1. Patient & Dimensions</h3>
+          <ul>
+            <li><strong>Patient Name:</strong> Appears on the header of the exported PDF.</li>
+            <li><strong>Graft Diameter (mm):</strong> Crucial for accurate horizontal calculations. The software uses this to calculate the circumference ($C = d \cdot \pi$).</li>
+          </ul>
+
+          <h3>2. Baseline Position</h3>
+          <p>Defines where the measurements start from:</p>
+          <ul>
+            <li><strong>Top (0):</strong> Measurements start from the <em>proximal</em> edge of the fabric (top of the graph).</li>
+            <li><strong>Bottom (1):</strong> Measurements start from the <em>distal</em> edge or bifurcation flow divider (bottom of the graph).</li>
+          </ul>
+
+          <h3>3. Graft Type</h3>
+          <ul>
+            <li><strong>Tube:</strong> Standard thoracic or abdominal tube grafts.</li>
+            <li><strong>Bifurcation:</strong> Abdominal bifurcated grafts. Changes the 3D visualization to show iliac limbs.</li>
+          </ul>
+        </section>
+
+        <section id="struts" class="doc-section mb-12 scroll-mt-24">
+          <h2>Endograft Struts (Visual Aid)</h2>
+          <p>EndoDraft can overlay the metal strut structure of specific commercial devices to help avoid fenestrations conflicting with metal parts.</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div class="bg-oberon-light p-4 rounded-lg border border-slate-700">
+              <h4 class="text-white mt-0">Supported Devices</h4>
+              <ul class="mb-0 text-sm">
+                <li><strong>Valiant</strong> (Medtronic) - 28-32mm</li>
+                <li><strong>TREO</strong> (Terumo) - 33mm</li>
+              </ul>
+            </div>
+            <div class="bg-oberon-light p-4 rounded-lg border border-slate-700">
+               <h4 class="text-white mt-0">Compatibility</h4>
+               <p class="text-sm mb-0">Strut overlay is currently available only for <strong>Tube</strong> graft configurations.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="add-fenestration" class="doc-section mb-12 scroll-mt-24">
+          <h2>Adding Fenestrations</h2>
+          <p>Use the inputs in the right sidebar to define fenestrations precisely.</p>
+
+          <h3>Input Fields</h3>
+          <ol>
+            <li><strong>Name:</strong> Label for the vessel (e.g., "LRA", "SMA").</li>
+            <li><strong>Clock Position:</strong> Format is <code>hh</code>h<code>mm</code> (e.g., <code>03h30</code> or <code>12h15</code>).
+              <br><em class="text-xs text-slate-500">Tip: If you type "3h30", the software autocorrects it to "03h30".</em>
+            </li>
+            <li><strong>Distance (mm):</strong> Distance from your selected Baseline (Y-axis).</li>
+            <li><strong>Diameter (mm):</strong> Size of the fenestration hole.</li>
+          </ol>
+          <p>Click <strong class="text-green-500">Draw Fenestration</strong> to add it to the plan.</p>
+        </section>
+
+        <section id="interactive-edit" class="doc-section mb-12 scroll-mt-24">
+          <h2>Interactive Editing (2D)</h2>
+          <p>The central 2D view is fully interactive. You can fine-tune positions using the mouse.</p>
+
+          <h3>Drag & Drop with Measurements</h3>
+          <p>Click and drag any circle to move it. While dragging, the software displays <strong>Real-time Delta measurements</strong> in red text next to the cursor:</p>
+          <ul>
+            <li><code>ΔX</code>: Horizontal shift in mm (circumferential).</li>
+            <li><code>ΔY</code>: Vertical shift in mm (longitudinal).</li>
+            <li><code>Dist</code>: Euclidean distance from the original point.</li>
+          </ul>
+          <p>A <strong>"Ghost" circle</strong> (dashed grey line) remains at the original position until you release the mouse, allowing precise comparisons.</p>
+
+          <h3>Context Menu</h3>
+          <p><strong>Right-click</strong> on any fenestration to open a menu:</p>
+          <ul>
+            <li><strong>Edit Properties:</strong> Opens a dialog to manually change clock position, Y distance, or Diameter.</li>
+            <li><strong>Delete:</strong> Removes the fenestration.</li>
+          </ul>
+
+          <h3>Undo / Redo</h3>
+          <p>Mistakes happen. Use the toolbar buttons or shortcuts:</p>
+          <p>
+            <span class="key-bind">Ctrl</span> + <span class="key-bind">Z</span> : Undo<br>
+            <span class="key-bind">Ctrl</span> + <span class="key-bind">Y</span> : Redo
+          </p>
+        </section>
+
+        <section id="3d-view" class="doc-section mb-12 scroll-mt-24">
+          <h2>3D Visualization</h2>
+          <p>The right-hand panel shows a 3D rotatable preview of the graft.</p>
+          <ul>
+            <li><strong>Rotate:</strong> Click and drag the 3D model to view from different angles.</li>
+            <li><strong>Reset View:</strong> Click the "Reset View ↺" button to return to the default orientation.</li>
+            <li><strong>Visuals:</strong> The graft body fades out automatically based on the baseline setting to reveal fenestrations clearly.</li>
+          </ul>
+          <div class="bg-yellow-600/20 border border-yellow-500/30 p-4 rounded-lg mt-4">
+             <p class="mb-0 text-sm text-yellow-100">
+               ⚠️ <strong>Disclaimer:</strong> The 3D view is a schematic representation for visual assistance only. It is not a finite-element engineering model.
+             </p>
+          </div>
+        </section>
+
+        <section id="export-pdf" class="doc-section mb-12 scroll-mt-24">
+          <h2>PDF Export</h2>
+          <p>Click <strong class="text-green-500">Generate PDF</strong> to create the printable surgical plan.</p>
+          
+          <h3>Options</h3>
+          <ul>
+            <li><strong>Generate 3D View PDF:</strong> Creates a second page with a snapshot of the 3D model and a data list.</li>
+            <li><strong>Show Axis labels:</strong> Includes mm and clock ticks on the printed PDF.</li>
+          </ul>
+
+          <h3>🖨️ Printing Instruction</h3>
+          <p class="text-white bg-red-900/40 p-3 rounded border border-red-800">
+             <strong>CRITICAL:</strong> When printing the PDF, you must select <strong>"Real Size"</strong> or <strong>"Scale: 100%"</strong> in the printer dialog. <br>
+             Do <u>NOT</u> select "Fit to page" or "Shrink to fit", as this will distort the measurements!
+          </p>
+        </section>
+
+        <section id="export-gcode" class="doc-section mb-12 scroll-mt-24">
+          <h2>Laser Cutting (G-Code)</h2>
+          <p>EndoDraft can generate a <code>.gcode</code> file for automated laser cutters (e.g., diode lasers) to cut the fenestrations into a sterile paper template.</p>
+          <ul>
+            <li><strong>Enable:</strong> Check "Generate G-Code file" before clicking Generate PDF.</li>
+            <li><strong>Output:</strong> The file is saved in the same folder as the PDF with the <code>_laser.gcode</code> suffix.</li>
+            <li><strong>Calibration:</strong> The code assumes a standard GRBL laser setup (Units: mm). Always test on scrap paper first!</li>
+          </ul>
+        </section>
+
+        <section id="saving" class="doc-section mb-12 scroll-mt-24">
+          <h2>Save & Load Project</h2>
+          <p>You can save your work to resume later.</p>
+          <ul>
+            <li><strong>File > Save Project:</strong> Saves all parameters (patient name, graft settings, fenestrations) into a <code>.json</code> file.</li>
+            <li><strong>File > Load Project:</strong> Restores the entire state from a JSON file.</li>
+          </ul>
+        </section>
+
+        <div id="no-results" class="hidden text-center py-20">
+            <p class="text-xl text-slate-500">No documentation found for "<span id="search-term" class="text-white"></span>"</p>
+            <button onclick="clearSearch()" class="mt-4 text-oberon-accent hover:underline">Clear Search</button>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Search Functionality
+    function filterDocs() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toLowerCase();
+      const sections = document.querySelectorAll('.doc-section');
+      const noResults = document.getElementById('no-results');
+      const searchTermSpan = document.getElementById('search-term');
+      
+      let hasVisible = false;
+
+      sections.forEach(section => {
+        const text = section.innerText.toLowerCase();
+        if (text.includes(filter)) {
+          section.style.display = ""; // Show
+          hasVisible = true;
+        } else {
+          section.style.display = "none"; // Hide
+        }
+      });
+
+      if (!hasVisible) {
+        noResults.classList.remove('hidden');
+        searchTermSpan.textContent = input.value;
+      } else {
+        noResults.classList.add('hidden');
+      }
+    }
+
+    // Mobile wrapper
+    function filterDocsMobile() {
+        const input = document.getElementById('searchInputMobile');
+        const filter = input.value.toLowerCase();
+        const sections = document.querySelectorAll('.doc-section');
+        let hasVisible = false;
+        
+        sections.forEach(section => {
+            if (section.innerText.toLowerCase().includes(filter)) {
+                section.style.display = "";
+                hasVisible = true;
+            } else {
+                section.style.display = "none";
+            }
+        });
+    }
+
+    function clearSearch() {
+        document.getElementById('searchInput').value = '';
+        document.getElementById('searchInputMobile').value = '';
+        filterDocs();
+    }
+  </script>
+</body>
+</html>
