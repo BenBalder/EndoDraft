@@ -1,7 +1,7 @@
 {
   "id": 1,
   "active": true,
-  "title": "Üdvözlet az EndoDraftban!",
-  "message": "Ez az első tesztüzenet a rendszerben. Köszönjük, hogy használod a szoftvert!",
+  "title": "Welcome in EndoDraft!",
+  "message": "This is a first test message. Thanks for using the software!",
   "type": "info"
 }
