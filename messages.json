@@ -1,7 +1,7 @@
 {
   "id": 1,
   "active": true,
-  "title": "Welcome in EndoDraft v1.7.3!",
-  "message": "Thanks for updating with the new installer! From now on, software updates will be performed via an installer/setup file, similar to other programs. This significantly increases the security of the software and protects it against decryption. Due to the lack of a digital signature, Windows may still indicate that the "software is not trusted"; please disregard this message.",
+  "title": "Welcome to EndoDraft v1.7.3!",
+  "message": "Thanks for updating with the new installer! From now on, software updates will be performed via an installer/setup file, similar to other programs. This significantly increases the security of the software and protects it against decryption. Due to the lack of a digital signature, Windows may still indicate that the 'software is not trusted', please disregard this message.",
   "type": "info"
 }
