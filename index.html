@@ -370,7 +370,7 @@
         const byExt = (ext) => assets.find(a => lower(a.name).endsWith(ext));
         const zip = byExt(".zip");
         const exe = byExt(".exe");
-        const chosen = zip || exe || assets[0];
+        const chosen = exe || zip || assets[0];
         return chosen?.browser_download_url || null;
       }
 
