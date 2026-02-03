@@ -2,6 +2,6 @@
   "id": 1,
   "active": true,
   "title": "Welcome to EndoDraft v1.7.3!",
-  "message": "Thanks for updating with the new installer! From now on, software updates will be performed via an installer/setup file, similar to other programs. This significantly increases the security of the software and protects it against decryption. From now on, use the simple EndoDraft.exe to launch EndoDraft. The other file (EndoDraft_v1.7.3.exe) is the temporary installer just for this update. You can delete it, or rename it for Installer, etc. Due to the lack of a digital signature, Windows may still indicate that the 'software is not trusted', please disregard this message.",
+  "message": "Thanks for updating with the new installer! From now on, software updates will be performed via an installer/setup file, similar to other programs. This significantly increases the security of the software and protects it against decryption. From now on, use the simple EndoDraft.exe to launch EndoDraft. The other file (EndoDraft_v1.7.3.exe) is the temporary installer just for this update. You can delete it, or rename it for Installer, etc. Due to the lack of a digital signature, Windows may still indicate that the 'software is not trusted', please disregard this message. Check out the Changelog menu option to see what's new!",
   "type": "info"
 }
