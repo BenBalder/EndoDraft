@@ -97,6 +97,9 @@
         <a href="#export-pdf" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">PDF Export</a>
         <a href="#export-gcode" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Laser Cutting (G-Code)</a>
         <a href="#saving" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Save & Load Project</a>
+		
+		<p class="px-2 mt-6 mb-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Support</p>
+        <a href="#support" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Help & Feedback</a>
       </nav>
     </aside>
 
@@ -126,10 +129,10 @@
 
         <section id="install" class="doc-section mb-12 scroll-mt-24">
           <h2>Installation & Updates</h2>
-          <p>EndoDraft is <strong>portable</strong>, meaning no installation wizard is required.</p>
+          <p>For security reasons, EndoDraft now comes with an installer.</p>
           <ul>
-            <li><strong>Download:</strong> Get the latest <code>.exe</code> or <code>.zip</code> from the website or GitHub releases.</li>
-            <li><strong>Run:</strong> Simply double-click <code>EndoDraft_vX.X.X.exe</code>.</li>
+            <li><strong>Installer (Recommended):</strong> Download <code>EndoDraft_Setup_vX.X.X.exe</code> and follow the installation wizard. This ensures smoother updates and creates desktop shortcuts.</li>
+            <li><strong>Run:</strong> Simply double-click <code>EndoDraft.exe</code>.</li>
             <li><strong>Updates:</strong> The software includes an <strong>Automatic Update</strong> feature. On startup, it checks GitHub for new versions. If found, it can download and restart automatically.</li>
           </ul>
           <p class="text-sm text-slate-500 italic">Note: If Windows SmartScreen appears, click "More Info" -> "Run Anyway". This is normal for unsigned medical software.</p>
@@ -155,7 +158,6 @@
           <h3>3. Graft Type</h3>
           <ul>
             <li><strong>Tube:</strong> Standard thoracic or abdominal tube grafts.</li>
-            <li><strong>Bifurcation:</strong> Abdominal bifurcated grafts. Changes the 3D visualization to show iliac limbs.</li>
           </ul>
         </section>
 
@@ -169,6 +171,8 @@
               <ul class="mb-0 text-sm">
                 <li><strong>Valiant</strong> (Medtronic) - 28-32mm</li>
                 <li><strong>TREO</strong> (Terumo) - 33mm</li>
+                <li><strong>Endurant II/IIs</strong> (Medtronic) - 23-28mm</li>
+                <li><strong>Endurant II/IIs</strong> (Medtronic) - 32-36mm</li>
               </ul>
             </div>
             <div class="bg-oberon-light p-4 rounded-lg border border-slate-700">
@@ -208,10 +212,14 @@
           <p>A <strong>"Ghost" circle</strong> (dashed grey line) remains at the original position until you release the mouse, allowing precise comparisons.</p>
 
           <h3>Context Menu</h3>
-          <p><strong>Right-click</strong> on any fenestration to open a menu:</p>
+          <p><strong>Right-click</strong> on any fenestration to access advanced tools:</p>
           <ul>
-            <li><strong>Edit Properties:</strong> Opens a dialog to manually change clock position, Y distance, or Diameter.</li>
-            <li><strong>Delete:</strong> Removes the fenestration.</li>
+            <li><strong>Edit Properties:</strong> Opens a dialog to manually change name, clock position, distance, or diameter.</li>
+            <li><strong>Move All (Select & Place):</strong> Allows you to grab the entire plan (all fenestrations together) and shift them.
+                <br><em class="text-xs text-slate-500">Useful if the initial baseline registration was slightly off. Distance measurements (ΔY) are shown in real-time.</em>
+            </li>
+            <li><strong>Show/Hide Ghost Fenestrations:</strong> Toggles the visibility of the grey "original position" markers to reduce clutter.</li>
+            <li><strong>Delete:</strong> Removes the selected fenestration.</li>
           </ul>
 
           <h3>Undo / Redo</h3>
@@ -270,6 +278,16 @@
           <ul>
             <li><strong>File > Save Project:</strong> Saves all parameters (patient name, graft settings, fenestrations) into a <code>.json</code> file.</li>
             <li><strong>File > Load Project:</strong> Restores the entire state from a JSON file.</li>
+          </ul>
+        </section>
+		
+		<section id="support" class="doc-section mb-12 scroll-mt-24">
+          <h2>Help & Feedback</h2>
+          <p>The top menu bar provides direct access to support features:</p>
+          <ul>
+            <li><strong>Report a Problem:</strong> Found a bug? Use this form to send a direct message to the developers.</li>
+            <li><strong>Newsletter:</strong> Subscribe to receive emails about major updates and new features.</li>
+            <li><strong>Changelog:</strong> View the detailed list of changes for the current version.</li>
           </ul>
         </section>
 
