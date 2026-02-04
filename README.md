@@ -51,15 +51,15 @@ This is a standard behavior for unsigned applications and does not mean the file
 - Click **“More info”**
 - Then select **“Run anyway”**
 
-No installation required. The program runs as a standalone `.exe`.
+For security reasons, installation is required with EndoDraft_Setup_vX.X.X.exe .
 
 ---
 
 ## 🖥 System Requirements
 
 - Windows 10 or newer (64-bit)
-- No installation necessary
-- No internet connection required (only for software updates)
+- Permission to run EndoDraft Installer
+- Internet connection for software updates
 - The software is currently optimized for **Windows**, macOS or Linux users can have issues. **Development is in progress**.
 
 ---
@@ -80,7 +80,9 @@ Copyright (c) 2026 Bendegúz Juhos
 This software (EndoDraft) is provided free of charge for academic and personal use only.
 
 - Redistribution, modification, or commercial use of the software is strictly prohibited without prior written permission from the author.
-- The software is distributed as a compiled executable (.exe) file only. No source code is provided.
+- The software is distributed as a compiled executable (.exe), with installer/setup file. No source code is provided.
+- The software collects anonymous usage statistics (e.g., graft type, number of fenestrations, OS version) to support development and research.
+- NO PATIENT DATA, names, or identifiable personal information are transmitted. All data processing is strictly anonymous.
 - The software is provided "as is", without warranty of any kind, express or implied.
 
 By using this software, you agree to the terms above.
