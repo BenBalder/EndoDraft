@@ -11,7 +11,7 @@ It enables precise design of fenestration locations, visual feedback in 2D/3D, a
 <p align="center">
   <img src="./media/2d_view.PNG" width="340"/>
   <img src="./media/endodraft_tubeform.gif" width="223"/>
-  <img src="./media/endodraft_bifurcation.gif" width="237"/>
+  <img src="./media/treo.gif" width="237"/>
 </p>
 *Sample 2D and rotating 3D preview of a fenestrated stent graft designed with EndoDraft.*
 <br><br>
