@@ -147,6 +147,57 @@
         </div>
       </div>
     </section>
+	
+	<hr class="my-10 border-slate-600">
+	
+	<section id="in-development" class="mb-12 scroll-mt-24">
+      <div class="max-w-5xl mx-auto bg-slate-800/40 border border-slate-700 rounded-2xl p-8 md:p-10 relative overflow-hidden shadow-lg hover:border-oberon-accent/60 transition duration-500">
+        
+        <div class="absolute top-0 right-0 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-bold px-4 py-1.5 rounded-bl-lg uppercase tracking-wider shadow-md z-10">
+          🚧 Work in Progress
+        </div>
+
+        <div class="text-center mb-8 mt-2">
+          <h3 class="text-2xl font-bold text-white mb-4">
+            Coming Soon: <span class="text-oberon-accent">Advanced 3D Spatial Planning</span>
+          </h3>
+          <p class="text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            We are actively developing the next major evolution of EndoDraft. The upcoming 3D spatial planning module will allow you to load patient CT scans directly, reconstruct accurate isosurface models, perform automated aortic segmentation, position the graft model, perform custom edits and verify fenestrations via an internal lumen view.
+          </p>
+        </div>
+
+        <div class="relative w-full max-w-2xl mx-auto group">
+          
+          <div class="overflow-hidden rounded-xl shadow-2xl border border-slate-600 bg-black">
+            <div id="wip-carousel-inner" class="flex transition-transform duration-700 ease-in-out w-full">
+              <img src="./media/builtin_mpr.jpg" alt="CT Scan Loading" class="w-full object-cover shrink-0 aspect-video">
+              <img src="./media/segmentation.jpg" alt="Aortic Segmentation" class="w-full object-cover shrink-0 aspect-video">
+              <img src="./media/intra_graft_view.jpg" alt="Internal Lumen View" class="w-full object-cover shrink-0 aspect-video">
+            </div>
+          </div>
+
+          <button id="wip-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/70 hover:bg-oberon-accent text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+
+          <button id="wip-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/70 hover:bg-oberon-accent text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            <button class="wip-dot w-2.5 h-2.5 rounded-full bg-white transition-all duration-300" data-index="0"></button>
+            <button class="wip-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300" data-index="1"></button>
+            <button class="wip-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300" data-index="2"></button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
 
     <hr class="my-10 border-slate-600">
 
@@ -521,6 +572,79 @@
         })
         .catch(() => { /* fallback: marad a Releases oldal */ });
     })();
+  </script>
+  
+  <script>
+    // --- WORK IN PROGRESS CAROUSEL LOGIC ---
+    document.addEventListener('DOMContentLoaded', () => {
+      const inner = document.getElementById('wip-carousel-inner');
+      if (!inner) return; // Ha nincs a pályán, nem csinál semmit
+      
+      const slides = inner.children;
+      const totalSlides = slides.length;
+      const dots = document.querySelectorAll('.wip-dot');
+      let currentIndex = 0;
+      let intervalId;
+
+      // Képernyő mozgatása és pöttyök frissítése
+      function updateCarousel() {
+        inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        dots.forEach((dot, index) => {
+          if (index === currentIndex) {
+            dot.classList.remove('bg-white/40', 'hover:bg-white/80');
+            dot.classList.add('bg-white', 'scale-110');
+          } else {
+            dot.classList.add('bg-white/40', 'hover:bg-white/80');
+            dot.classList.remove('bg-white', 'scale-110');
+          }
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+      }
+
+      // Auto-play 3 másodpercenként (3000 ms)
+      function startAutoPlay() {
+        intervalId = setInterval(nextSlide, 3000);
+      }
+
+      // Ha a felhasználó kattint, újraindítjuk az időzítőt, hogy ne ugorjon rögtön
+      function resetAutoPlay() {
+        clearInterval(intervalId);
+        startAutoPlay();
+      }
+
+      // Eseménykezelők a nyilakra
+      document.getElementById('wip-next').addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+      });
+
+      document.getElementById('wip-prev').addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+      });
+
+      // Eseménykezelők a pöttyökre
+      dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+          currentIndex = parseInt(e.target.getAttribute('data-index'));
+          updateCarousel();
+          resetAutoPlay();
+        });
+      });
+
+      // Indítás
+      startAutoPlay();
+    });
   </script>
 
 </body>
