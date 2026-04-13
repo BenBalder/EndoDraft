@@ -1,7 +1,7 @@
 {
   "id": 1,
   "active": true,
-  "target_versions": ["1.8.0"],
+  "target_versions": ["v1.8.0"],
   "title": "Welcome to EndoDraft v1.8.0!",
   "message": "The new Anatomy Viewer module has been released! Load your CT data and start planning now!",
   "type": "info"
