@@ -88,19 +88,25 @@
         <a href="#graft-params" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Graft Parameters</a>
         <a href="#struts" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Endograft Struts</a>
         
-        <p class="px-2 mt-6 mb-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Designing</p>
+        <div class="bg-yellow-500/10 border border-yellow-500/30 rounded-lg py-2 my-6 -mx-2 px-2 shadow-sm">
+            <p class="px-2 mb-2 text-xs font-bold text-yellow-500 uppercase tracking-wider">Anatomy Viewer Module</p>
+            <a href="#load-data" class="block px-2 py-1.5 text-sm text-yellow-100 hover:bg-yellow-500/20 hover:text-yellow-300 rounded-md transition">Loading CT / STL Data</a>
+            <a href="#anatomy-tools" class="block px-2 py-1.5 text-sm text-yellow-100 hover:bg-yellow-500/20 hover:text-yellow-300 rounded-md transition">Advanced Anatomy Tools</a>
+            <a href="#segmentation" class="block px-2 py-1.5 text-sm text-yellow-100 hover:bg-yellow-500/20 hover:text-yellow-300 rounded-md transition">Auto-Segmentation & Centerline</a>
+            <a href="#fevar-plan" class="block px-2 py-1.5 text-sm text-yellow-100 hover:bg-yellow-500/20 hover:text-yellow-300 rounded-md transition">3D FEVAR Planning & Fitting</a>
+        </div>
+        <p class="px-2 mt-6 mb-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Designing (2D)</p>
         <a href="#add-fenestration" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Adding Fenestrations</a>
-        <a href="#interactive-edit" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Interactive Editing (2D)</a>
-        <a href="#3d-view" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">3D Visualization</a>
+        <a href="#interactive-edit" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Interactive Editing</a>
         
         <p class="px-2 mt-6 mb-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Output</p>
         <a href="#export-pdf" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">PDF Export</a>
         <a href="#export-gcode" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Laser Cutting (G-Code)</a>
         <a href="#saving" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Save & Load Project</a>
-		
-		<p class="px-2 mt-6 mb-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Support</p>
+        
+        <p class="px-2 mt-6 mb-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Support</p>
         <a href="#support" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Help & Feedback</a>
-		<a href="#citation" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Scientific Citation</a>
+        <a href="#citation" class="block px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-oberon-accent rounded-md transition">Scientific Citation</a>
       </nav>
     </aside>
 
@@ -183,9 +189,76 @@
           </div>
         </section>
 
+        <section id="load-data" class="doc-section mb-12 scroll-mt-24">
+          <h2>Loading CT / STL Data</h2>
+          <p>EndoDraft's 3D Anatomy Viewer supports loading both raw CT scans and pre-segmented 3D meshes.</p>
+          <ul>
+            <li><strong>Load CT (DICOM):</strong> Select a folder containing DICOM files. The software features a <em>Smart Folder Search</em> that automatically finds the correct subfolder with the most files. It handles both compressed and uncompressed DICOMs securely.</li>
+            <li><strong>Load STL/OBJ:</strong> Load a surface mesh file (.stl, .obj) exported from 3rd party segmentation software.</li>
+            <li><strong>CT Threshold (HU):</strong> When a DICOM folder is loaded, use the slider to adjust the Hounsfield Unit threshold to visualize the bone and contrast-enhanced blood vessels.</li>
+          </ul>
+        </section>
+
+        <section id="anatomy-tools" class="doc-section mb-12 scroll-mt-24">
+          <h2>Advanced Anatomy Tools</h2>
+          <p>Use the sidebar controls to manipulate the loaded 3D models and visually assess the anatomy.</p>
+          <ul>
+            <li><strong>MPR (Multi-Planar Reconstruction):</strong> When a DICOM is loaded, enable 2D slices to view Axial (Z), Coronal (Y), and Sagittal (X) planes simultaneously with the 3D model.</li>
+            <li><strong>Clipping Plane:</strong> Enable the 3D clipping plane to dynamically cut the anatomy model in half, allowing you to see inside the lumen or aneurysm sac.</li>
+            <li><strong>Intra-Graft View (Endoscopy):</strong> Click this toggle to fly the camera inside the graft body. This allows you to check fenestration alignment from the perspective of the guidewire.</li>
+            <li><strong>Model Colors:</strong> Personalize the visualization by changing the anatomy color to Ivory, Crimson, Blue, Gold, Mint, or Pink.</li>
+            <li><strong>Clock Guide (12h):</strong> Displays a reference ring with 12h, 3h, 6h, and 9h markers around the graft to help with orientation.</li>
+            <li><strong>Measure:</strong> Click the 📏 Measure tool, then select two points on the 3D model to calculate the exact Euclidean distance.</li>
+          </ul>
+        </section>
+
+        <section id="segmentation" class="doc-section mb-12 scroll-mt-24">
+          <h2>Auto-Segmentation & Centerline</h2>
+          <p>EndoDraft includes a powerful voxel-based morphological engine to extract the aorta from raw CT data and generate an anatomical centerline.</p>
+
+          <div class="bg-indigo-900/30 border border-indigo-500/50 p-5 rounded-lg mb-6">
+            <h4 class="text-indigo-300 mt-0 font-bold flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Recommended Workflow
+            </h4>
+            <ol class="text-indigo-100 mb-0 space-y-2 mt-2">
+              <li>After loading the CT scan and adjusting the threshold, click the <strong>🪄 Auto-Segment Aorta (1 click)</strong> button. Rotate the 3D reconstructed model so you can clearly click on a clean point on the aorta's surface.</li>
+              <li>Next, it is recommended to use the <strong>✂ Cut Tool (Manual Cut)</strong> to slice off any unnecessary or redundant parts of the model (e.g., iliac extensions or spine artifacts). Adjust the red plane and click "Apply Cut".</li>
+              <li>After cutting, it is highly recommended to use the <strong>🪄 Magic Fix (Auto Clean)</strong> button. This algorithm automatically keeps only the largest connected object, instantly removing disconnected floating artifacts.</li>
+              <li>Finally, once the aorta is clean and isolated, run the <strong>📏 Generate Centerline</strong> function.</li>
+            </ol>
+          </div>
+
+          <h3>Cleanup Tools</h3>
+          <ul>
+            <li><strong>Undo:</strong> If you make a mistake during segmentation or cutting, use the "Undo" button to restore the original, uncut anatomy.</li>
+            <li><strong>Select Mode:</strong> Click the "Select Mode" button, press the <code>R</code> key on your keyboard, and draw a rectangle with your mouse to manually select and delete specific artifacts.</li>
+          </ul>
+        </section>
+
+        <section id="fevar-plan" class="doc-section mb-12 scroll-mt-24">
+          <h2>3D FEVAR Planning & Graft Fitting</h2>
+          <p>Once a centerline is generated, you can map target vessels directly on the 3D anatomy, and EndoDraft will calculate the complex arc lengths and clock positions for you.</p>
+          
+          <h3>1. 🎯 Start FEVAR Planning</h3>
+          <p>Click the "Start FEVAR Planning" button to open the planner window.</p>
+          <ol>
+            <li><strong>Set Baseline:</strong> Click on the 3D model where you want the Y=0 baseline to be (e.g., the lowest renal artery or the flow divider). A yellow ring will appear.</li>
+            <li><strong>Target Vessels:</strong> Click on the origins of the target vessels (e.g., SMA, Celiac). Red markers will appear.</li>
+            <li>EndoDraft calculates the true arc length (following the centerline's tortuosity) and the projected clock face angle.</li>
+            <li>In the floating window, you can rename vessels, adjust the fenestration hole diameter, or delete them.</li>
+            <li>Click <strong>Export to 2D FEVAR Planner</strong> to send these calculated coordinates to the main 2D map.</li>
+          </ol>
+
+          <h3>2. 🧲 Graft Fit</h3>
+          <p>Click the "Graft Fit" button to automatically snap and bend the straight tubular graft model onto the generated anatomical centerline. You can use the <strong>Slide Z</strong> slider to finely adjust the cranial/caudal positioning of the graft within the aorta.</p>
+        </section>
+
         <section id="add-fenestration" class="doc-section mb-12 scroll-mt-24">
-          <h2>Adding Fenestrations</h2>
-          <p>Use the inputs in the right sidebar to define fenestrations precisely.</p>
+          <h2>Adding Fenestrations (2D Planner)</h2>
+          <p>Use the inputs in the right sidebar of the main window to define fenestrations manually.</p>
 
           <h3>Input Fields</h3>
           <ol>
@@ -229,22 +302,6 @@
             <span class="key-bind">Ctrl</span> + <span class="key-bind">Z</span> : Undo<br>
             <span class="key-bind">Ctrl</span> + <span class="key-bind">Y</span> : Redo
           </p>
-		  		  
-        </section>
-
-        <section id="3d-view" class="doc-section mb-12 scroll-mt-24">
-          <h2>3D Visualization</h2>
-          <p>The right-hand panel shows a 3D rotatable preview of the graft.</p>
-          <ul>
-            <li><strong>Rotate:</strong> Click and drag the 3D model to view from different angles.</li>
-            <li><strong>Reset View:</strong> Click the "Reset View ↺" button to return to the default orientation.</li>
-            <li><strong>Visuals:</strong> The graft body fades out automatically based on the baseline setting to reveal fenestrations clearly.</li>
-          </ul>
-          <div class="bg-yellow-600/20 border border-yellow-500/30 p-4 rounded-lg mt-4">
-             <p class="mb-0 text-sm text-yellow-100">
-               ⚠️ <strong>Disclaimer:</strong> The 3D view is a schematic representation for visual assistance only. It is not a finite-element engineering model.
-             </p>
-          </div>
         </section>
 
         <section id="export-pdf" class="doc-section mb-12 scroll-mt-24">
@@ -282,8 +339,8 @@
             <li><strong>File > Load Project:</strong> Restores the entire state from a JSON file.</li>
           </ul>
         </section>
-		
-		<section id="support" class="doc-section mb-12 scroll-mt-24">
+        
+        <section id="support" class="doc-section mb-12 scroll-mt-24">
           <h2>Help & Feedback</h2>
           <p>The top menu bar provides direct access to support features:</p>
           <ul>
@@ -291,8 +348,8 @@
             <li><strong>Newsletter:</strong> Subscribe to receive emails about major updates and new features.</li>
             <li><strong>Changelog:</strong> View the detailed list of changes for the current version.</li>
           </ul>
-		  
-		  <div class="mt-8 pt-8 border-t border-slate-700">
+          
+          <div class="mt-8 pt-8 border-t border-slate-700">
             <h3 id="citation" class="scroll-mt-24 mt-0">Scientific Background & Citation</h3>
             
             <p>
@@ -314,7 +371,7 @@
               
             </div>
           </div>
-		  
+          
         </section>
 
         <div id="no-results" class="hidden text-center py-20">
