@@ -1,20 +1,23 @@
-# EndoDraft® – Surgical Planning Software for Aneurysm Fenestration Templates
+# EndoDraft® – Surgical Planning Software for Endovascular Interventions
 
 🛠️ **EndoDraft** is a lightweight, standalone surgical planning software designed to assist interventional radiologists and vascular surgeons in planning **physician-modified endografts (PMEGs)**.  
 It enables precise design of fenestration locations, visual feedback in 2D/3D, and exports print-ready plans for intraoperative use.
+
 > **➡️ [Download](#-download)**
+
 ---
 
 ## 🎥 Demo
 
-<!-- ![3D Model Preview](./media/punchplan_demo_inf.gif) -->
 <p align="center">
-  <img src="./media/2d_view.PNG" width="340"/>
-  <img src="./media/endodraft_tubeform.gif" width="223"/>
-  <img src="./media/treo.gif" width="237"/>
+  <img src="./media/endodraft_picture.PNG" width="850"/>
 </p>
-*Sample 2D and rotating 3D preview of a fenestrated stent graft designed with EndoDraft.*
+<p align="center">
+  <img src="./media/segmentation.jpg" width="850"/>
+</p>
+*Screenshots while using the software's 2D and 3D anatomy modules.*
 <br><br>
+
 <p align="center">
   <img src="./media/sample_aaa.png" width="414"/>
   <img src="./media/punchplan_method.jpg" width="387"/>
@@ -23,14 +26,16 @@ It enables precise design of fenestration locations, visual feedback in 2D/3D, a
 
 ---
 
-## 🚀 Features
+## 🚀 Powerful Features
 
-- 🧭 Computed Tomography (CT) based fenestration design
-- 📏 Baseline distance and clock position input with dual referencing
-- 🎯 Multiple fenestration types and diameters
-- 🖼 2D and 3D visual preview (interactive)
-- 📄 PDF export with surgical planning data
-- 🧠 Ideal for FEVAR / PMEG preoperative workflows
+A complete toolkit for the precise preoperative planning of Endovascular Interventions: EVAR, FEVAR, PMEG.
+
+- 🩻 **Native DICOM Engine:** Load raw CT scans directly. Visualize anatomy with real-time Multi-Planar Reconstruction (MPR), Hounsfield thresholding, and dynamic clipping planes.
+- 🪄 **1-Click Segmentation:** Advanced voxel-based morphology isolates the aorta, removes spine/bone artifacts, and generates highly accurate anatomical centerlines in seconds.
+- 🎯 **3D FEVAR Planning:** Map target vessels directly on the 3D anatomy. EndoDraft automatically calculates tortuosity-aware arc lengths and precise clock-face projections.
+- 🧲 **Smart Graft Fitting:** Snap and bend straight tubular endograft models seamlessly along the patient's anatomical centerline to verify fenestration alignment.
+- 🗺️ **Interactive 2D Templates:** Drag-and-drop fenestrations on an unrolled graft map with real-time delta measurements and commercial strut collision visualization.
+- 🖨️ **Surgical Export:** Generate print-ready PDF reports with precise axis scaling. Supports automated G-Code generation for sterile laser cutting.
 
 ---
 
@@ -51,7 +56,7 @@ This is a standard behavior for unsigned applications and does not mean the file
 - Click **“More info”**
 - Then select **“Run anyway”**
 
-For security reasons, installation is required with EndoDraft_Setup_vX.X.X.exe .
+For security reasons, installation is required with `EndoDraft_Setup_vX.X.X.exe`.
 
 ---
 
@@ -68,27 +73,28 @@ For security reasons, installation is required with EndoDraft_Setup_vX.X.X.exe .
 
 If you have questions, feature requests, or feedback, feel free to contact me through the software:
 
-> **➡️ [Download](#-download)**  or [open an issue](https://github.com/BenBalder/EndoDraft/issues) (GitHub account required)
+> **➡️ [Download](#-download)** or [open an issue](https://github.com/BenBalder/EndoDraft/issues) (GitHub account required)
 
 ---
 
-## 📜 License
-EndoDraft - Software License Agreement
+## 📜 License / Terms of Use
 
-Copyright (c) 2026 Bendegúz Juhos
+**EndoDraft - Software License Agreement** Copyright (c) 2026 Bendegúz Juhos
 
-This software (EndoDraft) is provided free of charge for academic and personal use only.
-
+- **EndoDraft®** is provided free of charge for academic, educational and personal use only.
 - Redistribution, modification, or commercial use of the software is strictly prohibited without prior written permission from the author.
-- The software is distributed as a compiled executable (.exe), with installer/setup file. No source code is provided.
+- The software is distributed as a compiled executable (`.exe`), with installer/setup file. No source code is provided.
 - The software collects anonymous usage statistics (e.g., graft type, number of fenestrations, OS version) to support development and research.
 - NO PATIENT DATA, names, or identifiable personal information are transmitted. All data processing is strictly anonymous.
 - The software is provided "as is", without warranty of any kind, express or implied.
 
-By using this software, you agree to the terms above.
+> **⚠️ Legal Disclaimer / Medical Device Notice** > EndoDraft® is an **experimental research tool** provided exclusively for use by trained vascular specialists to support their own planning workflow. It is **not a certified medical device** (no CE mark, FDA approval, or equivalent) and does not provide medical advice, diagnosis, or treatment. It must not be relied upon as a standalone tool for direct clinical decision-making.  
+>  
+> The clinician remains **solely responsible** for all clinical decisions, medical procedures, and the use of any modified endografts.  
+>  
+> Use is entirely at your own risk and subject to the full [Terms of Use / Legal Notice](https://www.endodraft.com/legal_notice.html).
+
+*By using this software, you agree to the terms above.*
 
 ---
-
 © 2026 Bendegúz Juhos - Semmelweis Aortic Center, Department of Interventional Radiology, Heart and Vascular Centre, Semmelweis University, Budapest, Hungary
-
-
