@@ -1,8 +1,8 @@
 {
-  "id": 2,
-  "active": false,
+  "id": 3,
+  "active": true,
   "target_versions": ["v1.8.0"],
-  "title": "New incoming 3D module",
-  "message": "Stay tuned! The new 3D spatial planning module for EndoDraft is launching in just 2 weeks. Get ready to elevate your workflow based on patient CT data! Preview at www.endodraft.com, or LinkedIn #endodraft.",
+  "title": "Feedback Request: 3D Module 🫁",
+  "message": "We hope you are enjoying the new 3D Anatomy Viewer! Your feedback directly shapes our future updates.\n\nTo share your thoughts, simply click the EndoDraft logo in the 2D view (or visit endodraft.com) and click the 'Share Your Feedback' banner at the top of the page.\n\nThank you for your support!",
   "type": "info"
 }
