@@ -2,7 +2,7 @@
   "id": 3,
   "active": true,
   "target_versions": ["v1.8.0"],
-  "title": "Feedback Request: 3D Module 🫁",
-  "message": "We hope you are enjoying the new 3D Anatomy Viewer! Your feedback directly shapes our future updates.\n\nTo share your thoughts, simply click the EndoDraft logo in the 2D view (or visit endodraft.com) and click the 'Share Your Feedback' banner at the top of the page.\n\nThank you for your support!",
+  "title": "Feedback Request",
+  "message": "We hope you are enjoying the new 3D Anatomy Viewer! Your feedback is very important to us.\n\nTo share your thoughts, simply click on the EndoDraft logo (or visit endodraft.com) and click the 'Share Your Feedback' banner at the top of the page.\n\nThank you for your support!",
   "type": "info"
 }
