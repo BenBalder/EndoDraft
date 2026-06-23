@@ -1,6 +1,6 @@
 {
   "id": 3,
-  "active": true,
+  "active": false,
   "target_versions": ["v1.8.0"],
   "title": "Feedback Request",
   "message": "We hope you are enjoying the new 3D Anatomy Viewer! Your feedback is very important to us.\n\nTo share your thoughts, simply click on the EndoDraft logo (or visit endodraft.com) and click the 'Share Your Feedback' banner at the top of the page.\n\nThank you for your support!",
