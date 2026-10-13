@@ -1,8 +1,8 @@
 {
-  "id": 3,
-  "active": false,
+  "id": 4,
+  "active": true,
   "target_versions": ["v1.8.0"],
-  "title": "Feedback Request",
-  "message": "We hope you are enjoying the new 3D Anatomy Viewer! Your feedback is very important to us.\n\nTo share your thoughts, simply click on the EndoDraft logo (or visit endodraft.com) and click the 'Share Your Feedback' banner at the top of the page.\n\nThank you for your support!",
+  "title": "Upcoming update",
+  "message": "Dear Users! A small update will be released in the coming weeks, bringing several fixes, quality-of-life improvements, and new features to the 3D planner. If anyone has a specific request or a graft strut template they would like us to implement, please send it to us in the next few days. ",
   "type": "info"
 }
